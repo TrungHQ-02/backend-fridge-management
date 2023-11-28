@@ -19,9 +19,60 @@ module.exports = (sequelize, DataTypes) => {
         autoIncrement: true,
         allowNull: false,
       },
-      firstName: DataTypes.STRING,
-      lastName: DataTypes.STRING,
-      email: DataTypes.STRING,
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+      },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      username: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+      },
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      type: {
+        type: DataTypes.STRING,
+        defaultValue: "user",
+      },
+      language: {
+        type: DataTypes.STRING,
+        defaultValue: "en",
+      },
+      gender: {
+        type: DataTypes.STRING,
+      },
+      countryCode: {
+        type: DataTypes.STRING,
+      },
+      timezone: {
+        type: DataTypes.INTEGER,
+      },
+      birthDate: {
+        type: DataTypes.DATE,
+      },
+      photoUrl: {
+        type: DataTypes.STRING,
+        defaultValue:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
+      },
+      isActivated: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true,
+      },
+      isVerified: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+      },
+      deviceId: {
+        type: DataTypes.STRING,
+      },
     },
     {
       sequelize,
