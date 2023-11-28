@@ -1,6 +1,7 @@
-import { config } from "dotenv";
-config();
+// Sử dụng require thay vì import
+const dotenv = require("dotenv");
+dotenv.config();
 
+// Sử dụng exports thay vì export
 const { PORT } = process.env;
-
-export const port = PORT || 8080;
+module.exports = PORT || 8080;

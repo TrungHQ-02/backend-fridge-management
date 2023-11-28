@@ -1,9 +1,10 @@
-import express from "express";
-import { port } from "./config/index.js";
-import loader from "./loaders/index.js";
+const express = require("express");
+const port = require("./config/index.js");
+console.log(port);
+// import loader from "./loaders/index.js";
 
 const app = express();
-loader(app);
+// loader(app);
 
 app.listen(port, (err) => {
   if (err) {
@@ -13,4 +14,4 @@ app.listen(port, (err) => {
   console.log(`Server is running on ${port}`);
 });
 
-export default app;
+// export default app;
