@@ -1,6 +1,6 @@
 const logger = require("../logger.js");
-import en from "../lang/en.js";
-import vn from "../lang/vn.js";
+const en = require("../lang/en.js");
+const vn = require("../lang/vn.js");
 
 let errorHelper = (code, req, errorMessage) => {
   let key = code;

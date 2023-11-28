@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   verificationCodeTitle: "Mã Xác Minh - (Tên Ứng Dụng)",
   verificationCodeBody: "Dưới đây là mã xác nhận của bạn:",
   welcomeCode: "Chào mừng bạn đến với (Tên Ứng Dụng),",

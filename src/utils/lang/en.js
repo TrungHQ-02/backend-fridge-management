@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   verificationCodeTitle: "Verification Code - (App Name)",
   verificationCodeBody: "Here is your confirm code:",
   welcomeCode: "Welcome to the (App Name),",

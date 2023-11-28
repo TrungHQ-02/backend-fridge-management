@@ -45,7 +45,7 @@ let expressLoader = (app) => {
       .json({
         resultMessage: {
           en: "Project is successfully working...",
-          tr: "Proje başarılı bir şekilde çalışıyor...",
+          vn: "Project đang chạy",
         },
         resultCode: "00004",
       })
