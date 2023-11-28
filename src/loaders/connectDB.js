@@ -1,11 +1,12 @@
-import { Sequelize } from "sequelize";
+const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize("crossplatform", "root", null, {
   host: "localhost",
   dialect: "mysql",
+  logging: false,
 });
 
-export default async () => {
+let sequelizeLoader = async () => {
   try {
     await sequelize.authenticate();
     console.log("Connection to database has been established successfully.");
@@ -13,3 +14,5 @@ export default async () => {
     console.error("Unable to connect to the database:", error);
   }
 };
+
+module.exports = sequelizeLoader;

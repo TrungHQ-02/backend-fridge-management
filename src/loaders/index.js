@@ -1,5 +1,7 @@
-import sequelizeLoader from "./connectDB.js";
+const sequelizeLoader = require("./connectDB.js");
 
-export default async (app) => {
+let loader = async (app) => {
   await sequelizeLoader();
 };
+
+module.exports = loader;
