@@ -1,9 +1,7 @@
 const express = require("express");
-const port = require("./config/index.js");
-console.log(port);
+const { port } = require("./config/index.js");
 const loader = require("./loaders/index.js");
 
-console.log(loader);
 const app = express();
 loader(app);
 
