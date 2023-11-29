@@ -59,8 +59,8 @@ let sendVerificationCode = async (req, res) => {
     return res.status(500).json(errorHelper("00037", req, err.message));
   }
 
-  const confirmCodeToken = signConfirmCodeToken(user._id, emailCode);
-  logger("00048", user._id, getText("en", "00048"), "Info", req);
+  const confirmCodeToken = signConfirmCodeToken(user.id, emailCode);
+  logger("00048", user.id, getText("en", "00048"), "Info", req);
   return res.status(200).json({
     resultMessage: { en: getText("en", "00048"), vn: getText("vn", "00048") },
     resultCode: "00048",
