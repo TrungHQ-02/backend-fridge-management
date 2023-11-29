@@ -35,7 +35,7 @@ let register = async (req, res) => {
       },
     });
 
-    console.log(exists);
+    // console.log(exists);
     if (exists != null) return res.status(409).json(errorHelper("00032", req));
   } catch (err) {
     return res.status(500).json(errorHelper("00031", req, err.message));
@@ -77,7 +77,7 @@ let register = async (req, res) => {
   } while (existsUsername != null);
 
   const geo = lookup(getIP(req));
-  console.log(geo);
+  // console.log(geo);
 
   user = "";
   try {

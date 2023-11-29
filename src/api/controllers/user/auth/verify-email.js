@@ -72,10 +72,10 @@ let verifyEmail = async (req, res) => {
         userId: req.user.id,
       },
     });
-    console.log(token);
+    // console.log(token);
 
     if (token == null) {
-      await db.Token.create({
+      let newToken = await db.Token.create({
         userId: req.user.id,
         refreshToken: refreshToken,
         status: true,
@@ -83,14 +83,17 @@ let verifyEmail = async (req, res) => {
         createdAt: Date.now(),
         createdByIp: getIP(req),
       });
+
+      // console.log(newToken);
     } else {
       await db.Token.update(
         {
           userId: req.user.id,
           refreshToken: refreshToken,
           status: true,
-          expires: Date.now() + 604800000,
+          expiresIn: Date.now() + 604800000,
           createdAt: Date.now(),
+          createdByIp: getIP(req),
         },
         {
           where: {
