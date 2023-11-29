@@ -30,13 +30,14 @@ let verifyEmail = async (req, res) => {
 
   let user;
   try {
-    user = await db.Token.findOne({
+    user = await db.User.findOne({
       where: {
         id: req.user.id,
         isActivated: true,
       },
     });
-    //  console.log(userToken);
+
+    // console.log(user);
   } catch (err) {
     return res.status(500).json(errorHelper("00051", req, err.message));
   }
@@ -53,7 +54,7 @@ let verifyEmail = async (req, res) => {
       },
       {
         where: {
-          userId: req.user.id,
+          id: req.user.id,
         },
       }
     );

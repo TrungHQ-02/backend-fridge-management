@@ -24,11 +24,9 @@ let login = async (req, res) => {
   }
 
   // query for the user
-  const user = await db.User.findOne({
+  let user = await db.User.findOne({
     where: {
       email: req.body.email,
-      isActivated: true,
-      isVerified: true,
     },
   }).catch((err) => {
     return res.status(500).json(errorHelper("00041", req, err.message));

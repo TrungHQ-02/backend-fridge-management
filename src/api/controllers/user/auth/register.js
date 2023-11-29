@@ -105,7 +105,7 @@ let register = async (req, res) => {
     resultMessage: { en: getText("en", "00035"), vn: getText("vn", "00035") },
     resultCode: "00035",
     user,
-    confirmToken: "123",
+    confirmToken: confirmCodeToken,
   });
 };
 
