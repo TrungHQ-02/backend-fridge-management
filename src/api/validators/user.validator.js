@@ -5,7 +5,7 @@ function validateRegister(body) {
     email: Joi.string().email().min(3).required(),
     password: Joi.string().min(6).max(20).required(),
     name: Joi.string().min(3).max(24).required(),
-    language: Joi.string().valid("tr", "en").required(),
+    language: Joi.string().valid("vn", "en").required(),
     timezone: Joi.number().required(),
     deviceId: Joi.string().min(4).required(),
   });
@@ -61,7 +61,7 @@ function validateEditUser(body) {
   const schema = Joi.object({
     name: Joi.string().min(3).max(24),
     username: Joi.string().min(3).max(15),
-    language: Joi.string().valid("tr", "en"),
+    language: Joi.string().valid("vn", "en"),
     gender: Joi.string().valid("male", "female", "other"),
     birthDate: Joi.date(),
   });

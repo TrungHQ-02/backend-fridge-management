@@ -21,7 +21,7 @@ let logout = async (req, res) => {
     return res.status(500).json(errorHelper("00046", req, err.message));
   }
 
-  logger("00050", req.user._id, getText("en", "00050"), "Info", req);
+  logger("00050", req.user.id, getText("en", "00050"), "Info", req);
   return res.status(200).json({
     resultMessage: { en: getText("en", "00050"), vn: getText("vn", "00050") },
     resultCode: "00050",

@@ -6,7 +6,7 @@ let errorHelper = (code, req, errorMessage) => {
   let key = code;
   if (!en[code]) key = "00008";
   let userId = "";
-  if (req && req.user) userId = req.user._id;
+  if (req && req.user) userId = req.user.id;
 
   const enMessage = en[key];
   const vnMessage = vn[key];

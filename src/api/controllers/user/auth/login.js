@@ -65,7 +65,7 @@ let login = async (req, res) => {
     return res.status(500).json(errorHelper("00008", req, err.message));
   }
 
-  logger("00047", user._id, getText("en", "00047"), "Info", req);
+  logger("00047", user.id, getText("en", "00047"), "Info", req);
   user.password = "";
   return res.status(200).json({
     resultMessage: { en: getText("en", "00047"), vn: getText("vn", "00047") },
