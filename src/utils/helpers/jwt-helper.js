@@ -7,7 +7,7 @@ const {
 
 function signAccessToken(userId) {
   const accessToken = sign({ id: userId }, jwtSecretKey, {
-    expiresIn: "1h",
+    expiresIn: "6h",
   });
   return accessToken;
 }

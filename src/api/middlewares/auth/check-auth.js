@@ -36,7 +36,7 @@ let auth = async (req, res, next) => {
     }
 
     try {
-      // check if token exist
+      // check if refresh token exist
       const tokenExists = await db.Token.findOne({
         where: {
           userId: req.user.id,
