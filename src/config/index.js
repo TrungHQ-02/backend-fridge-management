@@ -1,15 +1,16 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
+const swaggerConfig = require("./swagger.config.json");
+
 const {
   PORT,
   JWT_SECRET_KEY,
   REFRESH_TOKEN_SECRET_KEY,
   MAIL_USERNAME,
   MAIL_PASSWORD,
-  OAUTH_CLIENTID,
-  OAUTH_CLIENT_SECRET,
-  OAUTH_REFRESH_TOKEN,
+  MAIL_HOST,
+  MAIL_PORT,
 } = process.env;
 const prefix = "/api";
 
@@ -20,7 +21,8 @@ module.exports = {
   refreshTokenSecretKey: REFRESH_TOKEN_SECRET_KEY,
   mailUsername: MAIL_USERNAME,
   mailPassword: MAIL_PASSWORD,
-  oauthClientId: OAUTH_CLIENTID,
-  oauthClientSecret: OAUTH_CLIENT_SECRET,
-  oauthRefreshToken: OAUTH_REFRESH_TOKEN,
+  mailHost: MAIL_HOST,
+  mailPort: MAIL_PORT,
+  apiSpecs: "/docs",
+  swaggerConfig: swaggerConfig,
 };

@@ -117,3 +117,52 @@ let verifyEmail = async (req, res) => {
 };
 
 module.exports = verifyEmail;
+
+/**
+ * @swagger
+ * /user/verify-email:
+ *    post:
+ *      summary: Verifies the email address of the user.
+ *      requestBody:
+ *        description: Confirm code and confirm token.
+ *        required: true
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: object
+ *              properties:
+ *                token:
+ *                  type: string
+ *                code:
+ *                  type: string
+ *      tags:
+ *        - User
+ *      responses:
+ *        "200":
+ *          description: Your email address was verified successfully.
+ *          content:
+ *              application/json:
+ *                  schema:
+ *                      type: object
+ *                      properties:
+ *                          resultMessage:
+ *                              $ref: '#/components/schemas/ResultMessage'
+ *                          resultCode:
+ *                              $ref: '#/components/schemas/ResultCode'
+ *                          accessToken:
+ *                              type: string
+ *                          refreshToken:
+ *                              type: string
+ *        "400":
+ *          description: Please send a verification code.
+ *          content:
+ *              application/json:
+ *                  schema:
+ *                      $ref: '#/components/schemas/Result'
+ *        "500":
+ *          description: An internal server error occurred, please try again.
+ *          content:
+ *              application/json:
+ *                  schema:
+ *                      $ref: '#/components/schemas/Result'
+ */

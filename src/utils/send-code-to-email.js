@@ -4,9 +4,8 @@ const errorHelper = require("./helpers/error-helper.js");
 const {
   mailUsername,
   mailPassword,
-  oauthClientId,
-  oauthClientSecret,
-  oauthRefreshToken,
+  mailHost,
+  mailPort,
 } = require("../config/index.js");
 
 let sendCodeToEmail = (email, name, confirmCode, lang, type, req, res) => {
@@ -16,12 +15,12 @@ let sendCodeToEmail = (email, name, confirmCode, lang, type, req, res) => {
     }
 
     let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
+      host: mailHost,
+      port: mailPort,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: "mightyxpress2@gmail.com",
-        pass: "snicxvrprvcrcwtn",
+        user: mailUsername,
+        pass: mailPassword,
       },
     });
 
