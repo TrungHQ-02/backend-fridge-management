@@ -31,7 +31,7 @@ let login = async (req, res) => {
       isVerified: true,
     },
   }).catch((err) => {
-    return res.status(500).json(errorHelper("00008", req, err.message));
+    return res.status(500).json(errorHelper("00041", req, err.message));
   });
 
   if (!user) return res.status(404).json(errorHelper("00042", req));
@@ -62,7 +62,7 @@ let login = async (req, res) => {
       }
     );
   } catch (err) {
-    return res.status(500).json(errorHelper("00008", req, err.message));
+    return res.status(500).json(errorHelper("000046", req, err.message));
   }
 
   logger("00047", user.id, getText("en", "00047"), "Info", req);

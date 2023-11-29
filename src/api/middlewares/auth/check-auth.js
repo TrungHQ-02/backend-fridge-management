@@ -50,7 +50,7 @@ let auth = async (req, res, next) => {
       }
     } catch (err) {
       // server error
-      return res.status(500).json(errorHelper("00008", req, err.message));
+      return res.status(500).json(errorHelper("00010", req, err.message));
     }
     next();
   } catch (err) {
