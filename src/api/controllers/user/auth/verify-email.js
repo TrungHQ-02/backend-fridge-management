@@ -10,6 +10,7 @@ const {
   signAccessToken,
   signRefreshToken,
 } = require("../../../../utils/index.js");
+const getIP = require("../../../../utils/helpers/get-ip-helper.js");
 
 const { jwtSecretKey } = require("../../../../config/index.js");
 const pkg = require("jsonwebtoken");
@@ -66,21 +67,40 @@ let verifyEmail = async (req, res) => {
   const refreshToken = signRefreshToken(req.user.id);
 
   try {
-    await db.Token.update(
-      {
+    let token = await db.Token.findOne({
+      where: {
+        userId: req.user.id,
+      },
+    });
+    console.log(token);
+
+    if (token == null) {
+      await db.Token.create({
         userId: req.user.id,
         refreshToken: refreshToken,
         status: true,
-        expires: Date.now() + 604800000,
+        expiresIn: Date.now() + 604800000,
         createdAt: Date.now(),
-      },
-      {
-        where: {
+        createdByIp: getIP(req),
+      });
+    } else {
+      await db.Token.update(
+        {
           userId: req.user.id,
+          refreshToken: refreshToken,
+          status: true,
+          expires: Date.now() + 604800000,
+          createdAt: Date.now(),
         },
-      }
-    );
+        {
+          where: {
+            userId: req.user.id,
+          },
+        }
+      );
+    }
   } catch (err) {
+    console.log(err);
     return res.status(500).json(errorHelper("00057", req, err.message));
   }
 

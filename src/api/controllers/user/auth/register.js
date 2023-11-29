@@ -56,25 +56,25 @@ let register = async (req, res) => {
 
   let username = "";
   let tempName = "";
-  let existsUsername = true;
+  let existsUsername = "";
   let name = req.body.name;
   if (name.includes(" ")) {
     tempName = name.trim().split(" ").slice(0, 1).join("").toLowerCase();
   } else {
     tempName = name.toLowerCase().trim();
   }
-  username = tempName + generateRandomCode(4);
-  // do {
-  //   try {
-  //     const existsUsername = await db.User.findOne({
-  //       where: {
-  //         username: username,
-  //       },
-  //     });
-  //   } catch (err) {
-  //     return res.status(500).json(errorHelper("00033", req, err.message));
-  //   }
-  // } while (existsUsername != null);
+  do {
+    username = tempName + generateRandomCode(4);
+    try {
+      existsUsername = await db.User.findOne({
+        where: {
+          username: username,
+        },
+      });
+    } catch (err) {
+      return res.status(500).json(errorHelper("00033", req, err.message));
+    }
+  } while (existsUsername != null);
 
   const geo = lookup(getIP(req));
   console.log(geo);
