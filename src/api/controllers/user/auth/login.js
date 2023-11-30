@@ -32,6 +32,7 @@ let login = async (req, res) => {
     return res.status(500).json(errorHelper("00041", req, err.message));
   });
 
+  console.log(user);
   if (!user) return res.status(404).json(errorHelper("00042", req));
 
   if (!user.isActivated) return res.status(400).json(errorHelper("00043", req));
