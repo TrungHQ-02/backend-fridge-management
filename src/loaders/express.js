@@ -87,7 +87,7 @@ let expressLoader = (app) => {
     return res.json({
       resultMessage: {
         en: error.message,
-        tr: error.message,
+        vn: error.message,
       },
       resultCode: resultCode,
     });

@@ -13,7 +13,7 @@ const {
   deleteUser,
 } = require("../controllers/user/index.js");
 
-const { auth } = require("../middlewares/index.js");
+const { auth, imageUpload } = require("../middlewares/index.js");
 
 let router = express.Router();
 
@@ -26,7 +26,7 @@ router.post("/forgot-password", auth, forgotPassword);
 router.post("/send-verification-code", sendVerificationCode);
 
 router.post("/change-password", auth, changePassword);
-// router.put("/", auth, imageUpload, editUser);
+router.put("/", auth, imageUpload, editUser);
 router.get("/", auth, getUser);
 router.delete("/", auth, deleteUser);
 

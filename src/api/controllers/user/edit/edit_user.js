@@ -1,29 +1,19 @@
-import { User } from "../../../../models/index.js";
-import { validateEditUser } from "../../../validators/user.validator.js";
-import {
-  errorHelper,
-  logger,
-  getText,
-  turkishToEnglish,
-} from "../../../../utils/index.js";
-import {
-  awsAccessKey,
-  awsSecretAccessKey,
-  awsRegion,
-  bucketName,
-} from "../../../../config/index.js";
-import aws from "aws-sdk";
-const { S3 } = aws;
+const db = require("../../../../models/index.js");
+const { validateEditUser } = require("../../../validators/user.validator.js");
+const { errorHelper, logger, getText } = require("../../../../utils/index.js");
+const { firebaseConfig } = require("../../../../config/index.js");
 
-const s3 = new S3({
-  accessKeyId: awsAccessKey,
-  secretAccessKey: awsSecretAccessKey,
-  region: awsRegion,
-  signatureVersion: "v4",
-});
+const { initializeApp } = require("firebase/app");
 
-export default async (req, res) => {
+const {
+  getStorage,
+  ref,
+  getDownloadURL,
+  uploadBytesResumable,
+} = require("firebase/storage");
+let editUser = async (req, res) => {
   const { error } = validateEditUser(req.body);
+  console.log(error);
   if (error) {
     let code = "00077";
     const message = error.details[0].message;
@@ -34,67 +24,98 @@ export default async (req, res) => {
     return res.status(400).json(errorHelper(code, req, message));
   }
 
-  const user = await User.findById(req.user._id).catch((err) => {
+  let user = "";
+  try {
+    user = await db.User.findOne({
+      where: {
+        id: req.user.id,
+      },
+    });
+  } catch (err) {
     return res.status(500).json(errorHelper("00082", req, err.message));
-  });
+  }
 
   if (req.body.name) user.name = req.body.name;
   if (req.body.gender) user.gender = req.body.gender;
   if (req.body.birthDate) user.birthDate = req.body.birthDate;
   if (req.body.language) user.language = req.body.language;
   if (req.body.username && req.body.username !== user.username) {
-    const exist = await User.exists({ username: req.body.username }).catch(
-      (err) => {
-        return res.status(500).json(errorHelper("00083", req, err.message));
-      }
-    );
-    if (exist) return res.status(400).json(errorHelper("00084", req));
+    let existUsername = "";
+    try {
+      existUsername = (await db.User.findOne({
+        where: {
+          username: req.body.username,
+        },
+      }))
+        ? 1 // username exist
+        : 0; // username not exist
+    } catch (err) {
+      return res.status(500).json(errorHelper("00083", req, err.message));
+    }
 
-    user.username = req.body.username;
+    if (existUsername == 1)
+      return res.status(400).json(errorHelper("00084", req));
+    else {
+      user.username = req.body.username;
+    }
   }
   let hasError = false;
   if (req.file) {
-    const params = {
-      Bucket: bucketName,
-      Key:
-        turkishToEnglish(user.name).replace(/\s/g, "").toLowerCase() +
-        "/" +
-        user._id +
-        "/" +
-        Date(Date.now()).toLowerCase().substring(0, 15).replace(/\s/g, "-"),
-      Body: req.file.buffer,
-      ContentType: req.file.mimetype,
+    initializeApp(firebaseConfig);
+    const storage = getStorage();
+    const dateTime = giveCurrentDateTime();
+
+    const storageRef = ref(storage, `${user.id}/${dateTime}`);
+
+    const metadata = {
+      contentType: req.file.mimetype,
     };
 
-    await s3
-      .upload(params)
-      .promise()
-      .then((data) => {
-        user.photoUrl = data.Location;
-      })
-      .catch((err) => {
-        hasError = true;
-        return res
-          .status(500)
-          .json(errorHelper("00087", req, err.message))
-          .end();
-      });
+    console.log(metadata);
+
+    try {
+      const snapshot = await uploadBytesResumable(
+        storageRef,
+        req.file.buffer,
+        metadata
+      );
+
+      user.photoUrl = await getDownloadURL(snapshot.ref);
+      // console.log(user.photoUrl);
+      // console.log("File successfully upload");
+    } catch (err) {
+      hasError = true;
+      return res.status(500).json(errorHelper("00087", req, err.message)).end();
+    }
   }
 
   if (!hasError) {
-    await user.save().catch((err) => {
+    try {
+      await user.save();
+    } catch (err) {
       return res.status(500).json(errorHelper("00085", req, err.message));
-    });
+    }
 
-    //NOTE: The only thing we should send to the front is the url of the uploaded photo. Front-end knows all other changes.
-    logger("00086", req.user._id, getText("en", "00086"), "Info", req);
+    logger("00086", req.user.id, getText("en", "00086"), "Info", req);
     return res.status(200).json({
-      resultMessage: { en: getText("en", "00086"), tr: getText("tr", "00086") },
+      resultMessage: { en: getText("en", "00086"), vn: getText("vn", "00086") },
       resultCode: "00086",
       photoUrl: user.photoUrl,
     });
   }
 };
+
+const giveCurrentDateTime = () => {
+  const today = new Date();
+  const date =
+    today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+  const time =
+    today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  const dateTime = date + " " + time;
+  return dateTime;
+};
+
+module.exports = editUser;
 
 /**
  * @swagger

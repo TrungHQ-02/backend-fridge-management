@@ -64,6 +64,7 @@ function validateEditUser(body) {
     language: Joi.string().valid("vn", "en"),
     gender: Joi.string().valid("male", "female", "other"),
     birthDate: Joi.date(),
+    image: Joi.allow(),
   });
   return schema.validate(body);
 }

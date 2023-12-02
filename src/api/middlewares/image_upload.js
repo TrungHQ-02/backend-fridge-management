@@ -4,6 +4,7 @@ const { memoryStorage } = require("multer");
 const storage = memoryStorage();
 const fileFilter = function (_req, file, cb) {
   if (
+    file.mimetype === "image/jpg" ||
     file.mimetype === "image/jpeg" ||
     file.mimetype === "image/png" ||
     file.mimetype === "image/svg+xml"
@@ -16,7 +17,6 @@ const fileFilter = function (_req, file, cb) {
 
 const imageUpload = multer({
   storage: storage,
-  limits: { fileSize: 1000000 },
   fileFilter: fileFilter,
 }).single("image");
 
