@@ -9,6 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      MealPlan.belongsTo(models.User);
+      MealPlan.belongsTo(models.Food);
     }
   }
   MealPlan.init(
@@ -23,6 +25,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
       },
       status: {
+        type: DataTypes.STRING,
+      },
+      // VD: bua trua bua toi
+      name: {
         type: DataTypes.STRING,
       },
     },

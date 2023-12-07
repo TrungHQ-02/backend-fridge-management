@@ -44,25 +44,25 @@ Object.keys(db).forEach((modelName) => {
   }
 });
 
-sequelize
-  .sync({
-    force: true,
-  })
-  .then(() => {
-    console.log("Database is updated");
-  })
-  .catch((error) => {
-    console.log(error);
-  });
-
 // sequelize
-//   .sync()
+//   .sync({
+//     force: true,
+//   })
 //   .then(() => {
 //     console.log("Database is updated");
 //   })
 //   .catch((error) => {
 //     console.log(error);
 //   });
+
+sequelize
+  .sync()
+  .then(() => {
+    console.log("Database is updated");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
