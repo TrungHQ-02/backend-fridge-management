@@ -73,6 +73,11 @@ module.exports = (sequelize, DataTypes) => {
       deviceId: {
         type: DataTypes.STRING,
       },
+      // added on 12/7/23
+      belongsToGroupAdminId: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
     },
     {
       sequelize,
