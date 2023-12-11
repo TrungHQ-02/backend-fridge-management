@@ -81,6 +81,7 @@ module.exports = (sequelize, DataTypes) => {
       belongsToGroupAdminId: {
         type: DataTypes.INTEGER,
         allowNull: true,
+        defaultValue: "",
       },
     },
     {

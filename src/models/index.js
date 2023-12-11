@@ -55,14 +55,14 @@ Object.keys(db).forEach((modelName) => {
 //     console.log(error);
 //   });
 
-sequelize
-  .sync()
-  .then(() => {
-    console.log("Database is updated");
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+// sequelize
+//   .sync()
+//   .then(() => {
+//     console.log("Database is updated");
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
