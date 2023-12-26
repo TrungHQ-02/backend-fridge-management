@@ -17,7 +17,7 @@ const {
   deleteMember,
 } = require("../controllers/user/index.js");
 
-const { auth, imageUpload } = require("../middlewares/index.js");
+const { auth, imageUpload, authority } = require("../middlewares/index.js");
 
 let router = express.Router();
 
@@ -38,5 +38,7 @@ router.post("/group", auth, createAGroup);
 router.get("/group", auth, getMembersInGroup);
 router.post("/group/add", auth, addMemberToGroup);
 router.delete("/group", auth, deleteMember);
+
+router.get("/logs", auth, authority, changePassword);
 
 module.exports = router;

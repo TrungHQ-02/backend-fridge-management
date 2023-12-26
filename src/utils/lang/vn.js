@@ -82,4 +82,6 @@ module.exports = {
   "00104": "Bạn không phải admin, không thể xóa",
   "00106": "Xóa thành công",
   "00107": "Thiếu username",
+
+  "00109": "Lấy log hệ thống thành công",
 };

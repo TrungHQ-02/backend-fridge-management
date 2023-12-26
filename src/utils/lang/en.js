@@ -83,4 +83,6 @@ module.exports = {
   "00104": "You are not the admin",
   "00106": "User removed from the group successfully",
   "00107": "Username is empty, please provide a specific username",
+
+  "00109": "Successfully retrieved logs",
 };
