@@ -85,4 +85,24 @@ module.exports = {
   "00107": "Username is empty, please provide a specific username",
 
   "00109": "Successfully retrieved logs",
+
+  "00110": "Successfully retrieved units",
+
+  "00112": "Missing unit name information",
+
+  "00113": "A unit with this name already exists",
+
+  //114,115 error server
+  "00116": "Unit created successfully",
+
+  "00117": "Missing old and new name information",
+  "00118": "Old name matches new name",
+  "00119": "Unit not found with the provided name",
+  // 120, 121
+  "00122": "Unit modification successful",
+
+  "00123": "Missing unit name information",
+  "00125": "Unit not found with the provided name",
+  // 126, 127
+  "00128": "Unit deletion successful",
 };

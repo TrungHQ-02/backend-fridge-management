@@ -84,4 +84,22 @@ module.exports = {
   "00107": "Thiếu username",
 
   "00109": "Lấy log hệ thống thành công",
+
+  "00110": "Lấy các unit thành công",
+
+  "00112": "Thiếu thông tin tên của đơn vị",
+  "00113": "Đã tồn tại đơn vị có tên này",
+  //114,115 error server
+  "00116": "Tạo đơn vị thành công",
+
+  "00117": "Thiếu thông tin name cũ, name mới",
+  "00118": "Tên cũ trùng với tên mới",
+  "00119": "Không tìm thấy đơn vị với tên cung cấp",
+  // 120, 121
+  "00122": "Sửa đổi đơn vị thành công",
+
+  "00123": "Thiếu thông tin tên của đơn vị",
+  "00125": "Không tìm thấy đơn vị với tên cung cấp",
+  // 126, 127
+  "00128": "Xóa đơn vị thành công",
 };
