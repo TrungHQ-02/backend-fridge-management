@@ -69,6 +69,20 @@ function validateEditUser(body) {
   return schema.validate(body);
 }
 
+function validateAddUserToGroup(body) {
+  const schema = Joi.object({
+    username: Joi.string().min(1).required(),
+  });
+  return schema.validate(body);
+}
+
+function validateDeleteUserFromGroup(body) {
+  const schema = Joi.object({
+    username: Joi.string().min(1).required(),
+  });
+  return schema.validate(body);
+}
+
 module.exports = {
   validateRegister,
   validateLogin,
@@ -78,4 +92,6 @@ module.exports = {
   validateForgotPassword,
   validateChangePassword,
   validateEditUser,
+  validateAddUserToGroup,
+  validateDeleteUserFromGroup,
 };

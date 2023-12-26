@@ -11,6 +11,10 @@ const {
   changePassword,
   editUser,
   deleteUser,
+  createAGroup,
+  getMembersInGroup,
+  addMemberToGroup,
+  deleteMember,
 } = require("../controllers/user/index.js");
 
 const { auth, imageUpload } = require("../middlewares/index.js");
@@ -29,5 +33,10 @@ router.post("/change-password", auth, changePassword);
 router.put("/", auth, imageUpload, editUser);
 router.get("/", auth, getUser);
 router.delete("/", auth, deleteUser);
+
+router.post("/group", auth, createAGroup);
+router.get("/group", auth, getMembersInGroup);
+router.post("/group/add", auth, addMemberToGroup);
+router.delete("/group", auth, deleteMember);
 
 module.exports = router;

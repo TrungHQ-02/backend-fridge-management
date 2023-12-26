@@ -9,6 +9,10 @@ const getUser = require("./get-user.js");
 const changePassword = require("./edit/change-password.js");
 const editUser = require("./edit/edit_user.js");
 const deleteUser = require("./delete-user.js");
+const createAGroup = require("./group/create-group.js");
+const getMembersInGroup = require("./group/get-members.js");
+const addMemberToGroup = require("./group/add-member.js");
+const deleteMember = require("./group/delete-member.js");
 module.exports = {
   login,
   logout,
@@ -21,4 +25,8 @@ module.exports = {
   changePassword,
   editUser,
   deleteUser,
+  createAGroup,
+  getMembersInGroup,
+  addMemberToGroup,
+  deleteMember,
 };

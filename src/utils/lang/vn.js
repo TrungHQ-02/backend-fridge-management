@@ -67,4 +67,19 @@ module.exports = {
   "00086": "Thông tin hồ sơ của bạn đã được thay đổi thành công.",
   "00089": "Thông tin người dùng đã được lấy thành công.",
   "00092": "Tài khoản của bạn đã bị xóa thành công.",
+
+  "00093": "Không thể tạo nhóm, bạn đã thuộc về một nhóm rồi",
+  "00095": "Tạo nhóm thành công",
+
+  "00096": "Bạn không thuộc về nhóm nào",
+  "00098": "Thành công",
+
+  "00099": "Người này đã thuộc về một nhóm",
+  "00100": "Thiếu username",
+  "00102": "Người dùng thêm vào nhóm thành công",
+
+  "00103": "Người này chưa vào nhóm nào",
+  "00104": "Bạn không phải admin, không thể xóa",
+  "00106": "Xóa thành công",
+  "00107": "Thiếu username",
 };

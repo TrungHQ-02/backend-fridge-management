@@ -13,6 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       User.hasMany(models.FridgeItem);
       User.hasMany(models.ShoppingList);
       User.hasMany(models.Food);
+
+      // User.hasMany(models.User, {
+      //   foreignKey: "belongsToGroupAdminId",
+      // });
+
+      // User.belongsTo(models.User);
     }
   }
   User.init(
@@ -81,7 +87,7 @@ module.exports = (sequelize, DataTypes) => {
       belongsToGroupAdminId: {
         type: DataTypes.INTEGER,
         allowNull: true,
-        defaultValue: "",
+        defaultValue: 0,
       },
     },
     {

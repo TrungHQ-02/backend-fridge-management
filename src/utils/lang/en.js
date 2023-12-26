@@ -69,4 +69,18 @@ module.exports = {
   "00086": "Your profile information was changed successfully.",
   "00089": "The user information has gotten successfully.",
   "00092": "Your account was deleted successfully.",
+
+  "00093": "Cannot create a new group, you belong to a group already",
+  "00095": "Your group has been created successfully",
+  "00096": "You dont belong to any group",
+  "00098": "Successfully",
+
+  "00099": "This user has already belonged to a group",
+  "00100": "Username is empty, please provide a specific username",
+  "00102": "User added to the group successfully",
+
+  "00103": "This user doesnt belong to any group",
+  "00104": "You are not the admin",
+  "00106": "User removed from the group successfully",
+  "00107": "Username is empty, please provide a specific username",
 };
