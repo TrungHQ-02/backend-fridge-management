@@ -33,6 +33,7 @@ let createAGroup = async (req, res) => {
   return res.status(200).json({
     resultMessage: { en: getText("en", "00095"), vn: getText("vn", "00095") },
     resultCode: "00095",
+    adminId: req.user.id,
   });
 };
 
