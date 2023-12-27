@@ -122,4 +122,19 @@ module.exports = {
   "00143": "Category not found with the provided name",
   // 144
   "00146": "Category deletion successful",
+
+  // Food code
+  "00147": "Please provide all required fields!",
+  "00148": "Please provide a valid food name!",
+  "00149": "Please provide the category name for the food",
+  "00150": "Please provide the unit name for the food",
+  "00151": "A food with this name already exists",
+  // 152
+  "00153": "Unit not found with the provided name",
+  // 154
+  "00155": "Category not found with the provided name",
+  // 156, 157
+  // 158: image upload failed
+  // 159
+  "00160": "Food creation successful",
 };

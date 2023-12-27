@@ -1,6 +1,11 @@
 const db = require("../../../../models/index.js");
 const { validateEditUser } = require("../../../validators/user.validator.js");
-const { errorHelper, logger, getText } = require("../../../../utils/index.js");
+const {
+  errorHelper,
+  logger,
+  getText,
+  giveCurrentDateTime,
+} = require("../../../../utils/index.js");
 const { firebaseConfig } = require("../../../../config/index.js");
 
 const { initializeApp } = require("firebase/app");
@@ -103,16 +108,6 @@ let editUser = async (req, res) => {
       photoUrl: user.photoUrl,
     });
   }
-};
-
-const giveCurrentDateTime = () => {
-  const today = new Date();
-  const date =
-    today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
-  const time =
-    today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  const dateTime = date + " " + time;
-  return dateTime;
 };
 
 module.exports = editUser;

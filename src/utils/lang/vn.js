@@ -121,4 +121,19 @@ module.exports = {
   "00143": "Không tìm thấy category với tên cung cấp",
   // 144, 145
   "00146": "Xóa category thành công",
+
+  // food code
+  "00147": "Vui lòng cung cấp tất cả các trường bắt buộc!",
+  "00148": "Vui lòng cung cấp tên của thực phẩm hợp lệ!",
+  "00149": "Vui lòng cung cấp tên của category của thực phẩm",
+  "00150": "Vui lòng cung cấp tên đơn vị đo của thực phẩm",
+  "00151": "Đã tồn tại thức ăn với tên này",
+  //152
+  "00153": "Không tìm thấy đơn vị với tên cung cấp",
+  //154
+  "00155": "Không tìm thấy category với tên cung cấp",
+  // 156, 157
+  // 158: image upload failed
+  // 159
+  "00160": "Tạo thực phẩm thành công",
 };
