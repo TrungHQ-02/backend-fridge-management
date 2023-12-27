@@ -102,4 +102,23 @@ module.exports = {
   "00125": "Không tìm thấy đơn vị với tên cung cấp",
   // 126, 127
   "00128": "Xóa đơn vị thành công",
+
+  // Food category
+  "00129": "Lấy các category thành công",
+  // 130
+  "00131": "Thiếu thông tin tên của category",
+  "00132": "Đã tồn tại category có tên này",
+  //133,134 error server
+  "00135": "Tạo category thành công",
+
+  "00136": "Thiếu thông tin name cũ, name mới",
+  "00137": "Tên cũ trùng với tên mới",
+  "00138": "Không tìm thấy category với tên cung cấp",
+  // 139, 140
+  "00141": "Sửa đổi category thành công",
+
+  "00142": "Thiếu thông tin tên của category",
+  "00143": "Không tìm thấy category với tên cung cấp",
+  // 144, 145
+  "00146": "Xóa category thành công",
 };

@@ -105,4 +105,21 @@ module.exports = {
   "00125": "Unit not found with the provided name",
   // 126, 127
   "00128": "Unit deletion successful",
+
+  // Food category
+  "00129": "Successfully retrieved units",
+  // 130
+  "00131": "Missing information for category name",
+  "00132": "A category with this name already exists",
+  // 133, 134 error server
+  "00135": "Category created successfully",
+  "00136": "Missing old and new category names",
+  "00137": "Old category name matches new name",
+  "00138": "Category not found with the provided name",
+  // 139, 140
+  "00141": "Category modification successful",
+  "00142": "Missing information for category name",
+  "00143": "Category not found with the provided name",
+  // 144
+  "00146": "Category deletion successful",
 };
