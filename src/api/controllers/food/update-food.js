@@ -48,6 +48,10 @@ let updateFood = async (req, res) => {
     // console.log(exists);
     if (exists == null) return res.status(409).json(errorHelper("00167", req));
     food = exists;
+
+    if (food.UserId != req.user.id) {
+      return res.status(409).json(errorHelper("00167x", req));
+    }
   } catch (err) {
     return res.status(500).json(errorHelper("00168", req, err.message));
   }

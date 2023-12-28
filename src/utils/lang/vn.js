@@ -148,6 +148,7 @@ module.exports = {
   "00166": "Please provide a valid new name for the food",
 
   "00167": "Food with the provided name doesn't exist",
+  "00167x": "Bạn không có quyền chỉnh sửa",
   // 168
   "00169": "Unit not found with the provided name",
   // 170
