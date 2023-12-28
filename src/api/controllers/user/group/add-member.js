@@ -25,8 +25,11 @@ let addMemberToGroup = async (req, res) => {
       },
     });
 
-    adminId = userToAdd.belongsToGroupAdminId;
+    if (userToAdd == null) {
+      return res.status(500).json(errorHelper("00099x", req));
+    }
 
+    adminId = userToAdd.belongsToGroupAdminId;
     //  this user has already belonged to a group
     if (adminId != 0) {
       return res.status(500).json(errorHelper("00099", req));

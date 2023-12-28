@@ -76,6 +76,7 @@ module.exports = {
   "00098": "Successfully",
 
   "00099": "This user has already belonged to a group",
+  "00099x": "This user doesnt exist",
   "00100": "Username is empty, please provide a specific username",
   "00102": "User added to the group successfully",
 
@@ -123,7 +124,7 @@ module.exports = {
   // 144
   "00146": "Category deletion successful",
 
-  // Food code
+  // Create Food code
   "00147": "Please provide all required fields!",
   "00148": "Please provide a valid food name!",
   "00149": "Please provide the category name for the food",
@@ -137,4 +138,26 @@ module.exports = {
   // 158: image upload failed
   // 159
   "00160": "Food creation successful",
+
+  // Update code
+  "00161": "Please provide all required fields!",
+  "00162": "Please provide a valid food name!",
+  "00163":
+    "Please provide at least one of the following fields: newName, newCategory, newUnit",
+  "00164": "Please provide a valid new category for the food",
+  "00165": "Please provide a valid new unit for the food",
+  "00166": "Please provide a valid new name for the food",
+
+  "00167": "Food with the provided name doesn't exist",
+  // 168
+  "00169": "Unit not found with the provided name",
+  // 170
+  "00171": "Category not found with the provided name",
+  // 172
+  "00173": "A food with this name already exists",
+  // 174
+  // 175
+  // 176: image upload failed
+  // 177
+  "00178": "Successfully",
 };

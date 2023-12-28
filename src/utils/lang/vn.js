@@ -75,6 +75,7 @@ module.exports = {
   "00098": "Thành công",
 
   "00099": "Người này đã thuộc về một nhóm",
+  "00099x": "Không tồn tại user này",
   "00100": "Thiếu username",
   "00102": "Người dùng thêm vào nhóm thành công",
 
@@ -136,4 +137,24 @@ module.exports = {
   // 158: image upload failed
   // 159
   "00160": "Tạo thực phẩm thành công",
+
+  // Update code
+  "00161": "Please provide all required fields!",
+  "00162": "Please provide a valid food name!",
+  "00163":
+    "Please provide at least one of the following fields: newName, newCategory, newUnit",
+  "00164": "Please provide a valid new category for the food",
+  "00165": "Please provide a valid new unit for the food",
+  "00166": "Please provide a valid new name for the food",
+
+  "00167": "Food with the provided name doesn't exist",
+  // 168
+  "00169": "Unit not found with the provided name",
+  // 170
+  "00171": "Category not found with the provided name",
+  // 172
+  "00173": "A food with this name already exists",
+  // 174
+  // 175
+  "00176": "Successfully",
 };

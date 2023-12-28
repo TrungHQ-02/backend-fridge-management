@@ -136,18 +136,18 @@ let createFood = async (req, res) => {
       }
 
       newFood.imageUrl = photoUrl;
-
-      logger("00160", req.user.id, getText("en", "00160"), "Info", req);
-      return res.status(200).json({
-        resultMessage: {
-          en: getText("en", "00160"),
-          vn: getText("vn", "00160"),
-        },
-        resultCode: "00160",
-        newFood,
-      });
     }
   }
+
+  logger("00160", req.user.id, getText("en", "00160"), "Info", req);
+  return res.status(200).json({
+    resultMessage: {
+      en: getText("en", "00160"),
+      vn: getText("vn", "00160"),
+    },
+    resultCode: "00160",
+    newFood,
+  });
 };
 
 module.exports = createFood;
