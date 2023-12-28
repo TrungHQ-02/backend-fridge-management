@@ -133,38 +133,40 @@ module.exports = {
   "00153": "Không tìm thấy đơn vị với tên cung cấp",
   //154
   "00155": "Không tìm thấy category với tên cung cấp",
+  "00156x": "Hãy vào nhóm trước để tạo thực phẩm",
+
   // 156, 157
   // 158: image upload failed
   // 159
   "00160": "Tạo thực phẩm thành công",
 
   // Update code
-  "00161": "Please provide all required fields!",
-  "00162": "Please provide a valid food name!",
+  "00161": "Vui lòng cung cấp tất cả các trường bắt buộc!",
+  "00162": "Vui lòng cung cấp tên thực phẩm hợp lệ!",
   "00163":
-    "Please provide at least one of the following fields: newName, newCategory, newUnit",
-  "00164": "Please provide a valid new category for the food",
-  "00165": "Please provide a valid new unit for the food",
-  "00166": "Please provide a valid new name for the food",
+    "Vui lòng cung cấp ít nhất một trong các trường sau: newName, newCategory, newUnit",
+  "00164": "Vui lòng cung cấp một danh mục mới hợp lệ cho thực phẩm",
+  "00165": "Vui lòng cung cấp một đơn vị mới hợp lệ cho thực phẩm",
+  "00166": "Vui lòng cung cấp một tên mới hợp lệ cho thực phẩm",
 
-  "00167": "Food with the provided name doesn't exist",
+  "00167": "Thực phẩm với tên đã cung cấp không tồn tại",
   "00167x": "Bạn không có quyền chỉnh sửa",
   // 168
-  "00169": "Unit not found with the provided name",
+  "00169": "Không tìm thấy đơn vị với tên đã cung cấp",
   // 170
-  "00171": "Category not found with the provided name",
+  "00171": "Không tìm thấy danh mục với tên đã cung cấp",
   // 172
-  "00173": "A food with this name already exists",
+  "00173": "Một thực phẩm với tên này đã tồn tại",
   // 174
   // 175
-  // 176: image upload failed
+  // 176: Lỗi tải ảnh lên
   // 177
-  "00178": "Successfully",
+  "00178": "Thành công",
 
-  // delete food
-  "00179": "Please provide a food name",
-  "00180": "Food not found with the provided name",
-  "00181": "You dont have permisson",
+  // Xóa thực phẩm
+  "00179": "Vui lòng cung cấp tên thực phẩm",
+  "00180": "Không tìm thấy thực phẩm với tên đã cung cấp",
+  "00181": "Bạn không có quyền",
   // 182, 183
-  "00184": "Food deletion successfull",
+  "00184": "Xóa thực phẩm thành công",
 };

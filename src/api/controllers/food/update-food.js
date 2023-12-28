@@ -49,7 +49,16 @@ let updateFood = async (req, res) => {
     if (exists == null) return res.status(409).json(errorHelper("00167", req));
     food = exists;
 
-    if (food.UserId != req.user.id) {
+    // check for authority
+    // mọi người trong nhóm đều có thể chỉnh sửa
+
+    let user = await db.User.findOne({
+      where: {
+        id: req.user.id,
+      },
+    });
+
+    if (food.UserId != user.belongsToGroupAdminId) {
       return res.status(409).json(errorHelper("00167x", req));
     }
   } catch (err) {
@@ -136,6 +145,7 @@ let updateFood = async (req, res) => {
       );
       photoUrl = await getDownloadURL(snapshot.ref);
       console.log("URL", photoUrl);
+      food.imageUrl = photoUrl;
     } catch (err) {
       hasError = true;
       return res.status(500).json(errorHelper("00176", req, err.message)).end();
@@ -143,7 +153,6 @@ let updateFood = async (req, res) => {
 
     if (!hasError) {
       try {
-        food.imageUrl = photoUrl;
         await food.save();
       } catch (e) {
         return res.status(500).json(errorHelper("00177", req, err.message));

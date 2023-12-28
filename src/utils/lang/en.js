@@ -134,6 +134,7 @@ module.exports = {
   "00153": "Unit not found with the provided name",
   // 154
   "00155": "Category not found with the provided name",
+  "00156x": "Please join a group first",
   // 156, 157
   // 158: image upload failed
   // 159

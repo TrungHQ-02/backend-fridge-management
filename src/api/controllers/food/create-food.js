@@ -38,6 +38,7 @@ let createFood = async (req, res) => {
       .json(errorHelper(code, req, error.details[0].message));
   }
 
+  // check if exist a food with the provided name
   try {
     const exists = await db.Food.findOne({
       where: {
@@ -84,12 +85,26 @@ let createFood = async (req, res) => {
     return res.status(500).json(errorHelper("00156", req, err.message));
   }
 
+  let user = "";
+  try {
+    user = await db.User.findOne({
+      where: {
+        id: req.user.id,
+      },
+    });
+    if (user.belongsToGroupAdminId == 0) {
+      return res.status(400).json(errorHelper("00156x", req));
+    }
+  } catch (err) {
+    return res.status(500).json(errorHelper("00156y", req, err.message));
+  }
+
   try {
     newFood = await db.Food.create({
       name: req.body.name,
       UnitOfMeasurementId: unitId,
       FoodCategoryId: categoryId,
-      UserId: req.user.id,
+      UserId: user.belongsToGroupAdminId,
     });
   } catch (err) {
     return res.status(500).json(errorHelper("00157", req, err.message));

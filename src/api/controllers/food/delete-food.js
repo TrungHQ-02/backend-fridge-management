@@ -23,7 +23,13 @@ let deleteFoodByName = async (req, res) => {
     if (exists == null) return res.status(409).json(errorHelper("00180", req));
     food = exists;
 
-    if (food.UserId != req.user.id) {
+    let user = await db.User.findOne({
+      where: {
+        id: req.user.id,
+      },
+    });
+
+    if (food.UserId != user.belongsToGroupAdminId) {
       return res.status(409).json(errorHelper("00181", req));
     }
   } catch (err) {
