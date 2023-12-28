@@ -169,4 +169,8 @@ module.exports = {
   "00181": "Bạn không có quyền",
   // 182, 183
   "00184": "Xóa thực phẩm thành công",
+
+  // get foods
+  "00185": "Bạn chưa vào nhóm nào",
+  "00188": "Lấy danh sách thực phẩm thành công",
 };

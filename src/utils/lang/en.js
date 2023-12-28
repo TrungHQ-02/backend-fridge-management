@@ -168,4 +168,8 @@ module.exports = {
   "00181": "You dont have permisson",
   // 182, 183
   "00184": "Food deletion successfull",
+
+  // get foods
+  "00185": "You dont belong to any group",
+  "00188": "Successfull retrieve all foods",
 };
