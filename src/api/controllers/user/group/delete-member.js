@@ -22,6 +22,10 @@ let deleteMember = async (req, res) => {
       },
     });
 
+    if (userToDelete == null) {
+      return res.status(500).json(errorHelper("00099x", req));
+    }
+
     adminId = userToDelete.belongsToGroupAdminId;
 
     //  this user is not belong to any group
