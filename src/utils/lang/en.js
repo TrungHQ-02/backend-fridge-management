@@ -161,4 +161,10 @@ module.exports = {
   // 176: image upload failed
   // 177
   "00178": "Successfully",
+  // delete food
+  "00179": "Please provide a food name",
+  "00180": "Food not found with the provided name",
+  "00181": "You dont have permisson",
+  // 182, 183
+  "00184": "Food deletion successfull",
 };

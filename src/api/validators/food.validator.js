@@ -20,7 +20,15 @@ function validateUpdateFood(body) {
   return schema.validate(body);
 }
 
+function validateDeleteFood(body) {
+  const schema = Joi.object({
+    name: Joi.string().min(1).required(),
+  });
+  return schema.validate(body);
+}
+
 module.exports = {
   validateCreateFood,
   validateUpdateFood,
+  validateDeleteFood,
 };
