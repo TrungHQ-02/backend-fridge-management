@@ -31,6 +31,20 @@ let editFoodCategoryByName = async (req, res) => {
   }
 
   try {
+    let exists = await db.FoodCategory.findOne({
+      where: {
+        name: req.body.newName,
+      },
+    });
+
+    if (exists != null) {
+      return res.status(400).json(errorHelper("00138x", req));
+    }
+  } catch (err) {
+    return res.status(500).json(errorHelper("00139x", req, err.message));
+  }
+
+  try {
     await db.FoodCategory.update(
       {
         name: req.body.newName,

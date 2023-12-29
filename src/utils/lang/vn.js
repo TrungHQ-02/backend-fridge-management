@@ -115,6 +115,7 @@ module.exports = {
   "00136": "Thiếu thông tin name cũ, name mới",
   "00137": "Tên cũ trùng với tên mới",
   "00138": "Không tìm thấy category với tên cung cấp",
+  "00138x": "Tên mới đã tồn tại",
   // 139, 140
   "00141": "Sửa đổi category thành công",
 

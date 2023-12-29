@@ -117,6 +117,7 @@ module.exports = {
   "00136": "Missing old and new category names",
   "00137": "Old category name matches new name",
   "00138": "Category not found with the provided name",
+  "00138x": "Category with new name already exists",
   // 139, 140
   "00141": "Category modification successful",
   "00142": "Missing information for category name",
