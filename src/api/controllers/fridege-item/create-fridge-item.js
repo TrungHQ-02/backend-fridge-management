@@ -79,6 +79,12 @@ let createFridgeItem = async (req, res) => {
       FoodId: food.id,
       UserId: user.belongsToGroupAdminId,
     });
+
+    newFridgeItem = await db.FridgeItem.findOne({
+      where: {
+        FoodId: food.id,
+      },
+    });
   } catch (err) {
     return res.status(500).json(errorHelper("00201", req, err.message));
   }

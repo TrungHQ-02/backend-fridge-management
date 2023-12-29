@@ -186,4 +186,18 @@ module.exports = {
   "00198": "Food does not belong to the group admin.",
   "00199": "Fridge item for the food already exists.",
   "00202": "Fridge item created successfully.",
+
+  // update
+  // 203: validation general error
+  "00204": "Please provide a valid food name!",
+  "00204x":
+    "Please provide at least one of the following fields: newQuantity, newNote, newUseWithin",
+  "00205": "Please provide a valid 'use within' value!",
+  "00206": "Please provide a valid quantity!",
+  "00207": "Invalid new note format!",
+  "00208": "Food does not exist.",
+  "00210": "User doesnt belong to any group",
+  "00212": "Fridge does not belong to the group admin.",
+  "00213": "Fridge item does not exist.",
+  "00216": "Fridge item updated successfully.",
 };

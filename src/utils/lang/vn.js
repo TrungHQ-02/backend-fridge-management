@@ -186,4 +186,18 @@ module.exports = {
   "00198": "Thực phẩm không thuộc quyền quản trị của nhóm.",
   "00199": "Mục trong tủ lạnh cho thực phẩm đã tồn tại.",
   "00202": "Mục trong tủ lạnh được tạo thành công.",
+
+  // cập nhật
+  // 203: lỗi tổng quát trong quá trình xác nhận
+  "00204": "Vui lòng cung cấp tên thực phẩm hợp lệ!",
+  "00204x":
+    "Vui lòng cung cấp ít nhất một trong các trường sau: newQuantity, newNote, newUseWithin",
+  "00205": "Vui lòng cung cấp một giá trị 'sử dụng trong' hợp lệ!",
+  "00206": "Vui lòng cung cấp một lượng hợp lệ!",
+  "00207": "Định dạng ghi chú mới không hợp lệ!",
+  "00208": "Thực phẩm không tồn tại.",
+  "00210": "Người dùng không thuộc bất kỳ nhóm nào",
+  "00212": "Tủ lạnh không thuộc quản trị viên nhóm.",
+  "00213": "Mục tủ lạnh không tồn tại.",
+  "00216": "Cập nhật mục tủ lạnh thành công.",
 };
