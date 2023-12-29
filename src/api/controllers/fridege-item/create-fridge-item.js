@@ -7,27 +7,90 @@ const { errorHelper, logger, getText } = require("../../../utils/index.js");
 let createFridgeItem = async (req, res) => {
   const { error } = validateCreateFridgeItem(req.body);
   if (error) {
-    let code = "00147";
+    let code = "00189";
+
     console.log(error.details[0].message);
-    if (error.details[0].message.includes("foodName")) code = "00151";
-    else if (error.details[0].message.includes("expiredDate")) code = "00153";
-    else if (error.details[0].message.includes("quantity")) code = "00200";
-    else if (error.details[0].message.includes("note")) code = "00155";
-    else if (error.details[0].message.includes("startDate")) code = "00156";
+    if (error.details[0].message.includes("foodName")) code = "00190";
+    else if (error.details[0].message.includes("useWithin")) code = "00191";
+    else if (error.details[0].message.includes("quantity")) code = "00192";
+    else if (error.details[0].message.includes("note")) code = "00193";
 
     return res
       .status(400)
       .json(errorHelper(code, req, error.details[0].message));
   }
 
-  logger("00160", req.user.id, getText("en", "00160"), "Info", req);
+  let food = "";
+  let user = "";
+  let newFridgeItem = "";
+
+  // check food
+  try {
+    const exists = await db.Food.findOne({
+      where: {
+        name: req.body.foodName,
+      },
+    });
+
+    // console.log(exists);
+    if (exists == null) return res.status(409).json(errorHelper("00194", req));
+    food = exists;
+  } catch (err) {
+    return res.status(500).json(errorHelper("00195", req, err.message));
+  }
+
+  try {
+    user = await db.User.findOne({
+      where: {
+        id: req.user.id,
+      },
+    });
+    if (user.belongsToGroupAdminId == 0) {
+      return res.status(400).json(errorHelper("00196", req));
+    }
+  } catch (err) {
+    return res.status(500).json(errorHelper("00197", req, err.message));
+  }
+
+  if (food.UserId != user.belongsToGroupAdminId) {
+    return res.status(400).json(errorHelper("00198", req));
+  }
+
+  try {
+    const exists = await db.FridgeItem.findOne({
+      where: {
+        FoodId: food.id,
+      },
+    });
+
+    if (exists != null) return res.status(409).json(errorHelper("00199", req));
+  } catch (err) {
+    return res.status(500).json(errorHelper("00200", req, err.message));
+  }
+
+  try {
+    let currentDate = new Date();
+    // currentDate = new Date(currentDate.getTime() + 60 * 60000);
+    newFridgeItem = await db.FridgeItem.create({
+      startDate: currentDate,
+      expiredDate: new Date(currentDate.getTime() + req.body.useWithin * 60000),
+      quantity: req.body.quantity,
+      note: req.body.note ? req.body.note : "",
+      FoodId: food.id,
+      UserId: user.belongsToGroupAdminId,
+    });
+  } catch (err) {
+    return res.status(500).json(errorHelper("00201", req, err.message));
+  }
+
+  logger("00202", req.user.id, getText("en", "00202"), "Info", req);
   return res.status(200).json({
     resultMessage: {
-      en: getText("en", "00160"),
-      vn: getText("vn", "00160"),
+      en: getText("en", "00202"),
+      vn: getText("vn", "00202"),
     },
-    resultCode: "00160",
-    newFood,
+    resultCode: "00202",
+    newFridgeItem,
   });
 };
 

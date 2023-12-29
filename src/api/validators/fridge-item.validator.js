@@ -3,10 +3,9 @@ const Joi = require("joi");
 function validateCreateFridgeItem(body) {
   const schema = Joi.object({
     foodName: Joi.string().min(1).required(),
-    expiredDate: Joi.date().required(),
-    quantity: Joi.number().integer().positive().required(),
+    useWithin: Joi.number().positive().required(),
+    quantity: Joi.number().positive().required(),
     note: Joi.string().allow("").optional(),
-    startDate: Joi.date().optional(),
   });
   return schema.validate(body);
 }

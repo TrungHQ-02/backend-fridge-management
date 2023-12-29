@@ -5,5 +5,5 @@ const { auth } = require("../middlewares/index.js");
 
 let router = express.Router();
 
-router.post("/", createFridgeItem);
+router.post("/", auth, createFridgeItem);
 module.exports = router;

@@ -174,4 +174,16 @@ module.exports = {
   // get foods
   "00185": "Bạn chưa vào nhóm nào",
   "00188": "Lấy danh sách thực phẩm thành công",
+
+  // Tạo mục trong tủ lạnh
+  "00190": "Vui lòng cung cấp một tên thực phẩm hợp lệ!",
+  "00191": "Vui lòng cung cấp một giá trị 'sử dụng trong khoảng' hợp lệ!",
+  "00192": "Vui lòng cung cấp một số lượng hợp lệ!",
+  "00193": "Định dạng ghi chú không hợp lệ!",
+
+  "00194": "Thực phẩm không tồn tại.",
+  "00196": "Người dùng không có quyền do không thuộc nhóm.",
+  "00198": "Thực phẩm không thuộc quyền quản trị của nhóm.",
+  "00199": "Mục trong tủ lạnh cho thực phẩm đã tồn tại.",
+  "00202": "Mục trong tủ lạnh được tạo thành công.",
 };

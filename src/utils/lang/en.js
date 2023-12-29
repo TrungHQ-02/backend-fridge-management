@@ -117,7 +117,8 @@ module.exports = {
   "00136": "Missing old and new category names",
   "00137": "Old category name matches new name",
   "00138": "Category not found with the provided name",
-  "00138x": "Category with new name already exists",
+  "00138x":
+    "Category with const name = new type(arguments); name already exists",
   // 139, 140
   "00141": "Category modification successful",
   "00142": "Missing information for category name",
@@ -173,4 +174,16 @@ module.exports = {
   // get foods
   "00185": "You dont belong to any group",
   "00188": "Successfull retrieve all foods",
+
+  // create fridge item
+  "00190": "Please provide a valid food name!",
+  "00191": "Please provide a valid 'use within' value!",
+  "00192": "Please provide a valid quantity!",
+  "00193": "Invalid note format!",
+
+  "00194": "Food does not exist.",
+  "00196": "User doesnt belong to any group",
+  "00198": "Food does not belong to the group admin.",
+  "00199": "Fridge item for the food already exists.",
+  "00202": "Fridge item created successfully.",
 };
