@@ -33,10 +33,10 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue:
           "https://th.bing.com/th/id/R.548a12fad490b2b1ef2064c7a9354245?rik=GmPntyKgA6kb5A&riu=http%3a%2f%2fimages.huffingtonpost.com%2f2014-04-07-af1.jpg&ehk=%2bp%2fkN95IBx6Uu7nvJHw%2fTtthzWSCeBu9iKakzrSJtJA%3d&risl=&pid=ImgRaw&r=0",
       },
-      // type: {
-      //   type: DataTypes.STRING,
-      //   defaultValue: "ingredient",
-      // },
+      type: {
+        type: DataTypes.STRING,
+        defaultValue: "ingredient",
+      },
     },
     {
       sequelize,

@@ -33,6 +33,10 @@ module.exports = (sequelize, DataTypes) => {
       assignedToUserId: {
         type: DataTypes.INTEGER,
       },
+      date: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
     },
     {
       sequelize,
