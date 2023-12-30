@@ -227,4 +227,21 @@ module.exports = {
   "00246":
     "Unauthorized access. You do not have permission to assign a shopping list to this user.",
   "00249": "Shopping list created successfully.",
+
+  // update shopping list
+  "00250": "Default error message",
+  "00251": "Please provide a list id",
+  "00252":
+    "Please provide at least one of the following fields: newName, newAssignToUsername, newNote, newDate",
+  "00253": "Invalid new name format",
+  "00254": "Invalid new assignee username format",
+  "00255": "Invalid new note format",
+  "00256": "Invalid new date format",
+  "00258": "User is not the group administrator",
+  "00260": "Shopping list not found",
+  "00261": "User is not the administrator of this shopping list",
+  "00262": "User does not exist",
+  "00263":
+    "User does not have the authority to assign this list to the username",
+  "00266": "Shopping list updated successfully",
 };

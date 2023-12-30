@@ -230,4 +230,20 @@ module.exports = {
   "00246":
     "Truy cập không được ủy quyền. Bạn không có quyền gán danh sách mua sắm cho người dùng này.",
   "00249": "Danh sách mua sắm đã được tạo thành công.",
+
+  //update shopping list
+  "00250": "Thông báo lỗi mặc định",
+  "00251": "Vui lòng cung cấp id danh sách",
+  "00252":
+    "Vui lòng cung cấp ít nhất một trong những trường sau: newName, newAssignToUsername, newNote, newDate",
+  "00253": "Định dạng tên mới không hợp lệ",
+  "00254": "Định dạng tên người được giao mới không hợp lệ",
+  "00255": "Định dạng ghi chú mới không hợp lệ",
+  "00256": "Định dạng ngày mới không hợp lệ",
+  "00258": "Người dùng không phải là quản trị viên nhóm",
+  "00260": "Không tìm thấy danh sách mua sắm",
+  "00261": "Người dùng không phải là quản trị viên của danh sách mua sắm này",
+  "00262": "Người dùng không tồn tại",
+  "00263": "Người dùng không có quyền gán danh sách này cho tên người dùng",
+  "00266": "Cập nhật danh sách mua sắm thành công",
 };
