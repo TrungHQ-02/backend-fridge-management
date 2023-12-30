@@ -5,7 +5,7 @@ const {
   deleteFridgeItemByName,
   getAllFridgeItemsOfGroup,
   getSpecificFridgeItem,
-} = require("../controllers/fridege-item/index.js");
+} = require("../controllers/fridge-item/index.js");
 
 const { auth } = require("../middlewares/index.js");
 
