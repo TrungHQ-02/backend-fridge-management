@@ -215,4 +215,16 @@ module.exports = {
   "00232": "You dont have permisson",
   "00234": "Fridge item associated with this food hasnt been created yet",
   "00237": "Get specific item successfull",
+
+  // create shopping list for a user
+  "00238": "Default error message",
+  "00239": "Please provide a name",
+  "00240": "Please provide an assignToUsername",
+  "00241": "Invalid note format",
+  "00242": "Invalid date format",
+  "00243": "Unauthorized access. You do not have permission.",
+  "00245": "Assigned username does not exist.",
+  "00246":
+    "Unauthorized access. You do not have permission to assign a shopping list to this user.",
+  "00249": "Shopping list created successfully.",
 };

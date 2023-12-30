@@ -217,4 +217,17 @@ module.exports = {
   "00232": "Bạn không có quyền",
   "00234": "Mục trong tủ lạnh liên kết với thực phẩm này chưa được tạo",
   "00237": "Lấy item cụ thể thành công",
+
+  // tạo shopping list cho thành viên
+
+  "00238": "Thông báo lỗi mặc định",
+  "00239": "Vui lòng cung cấp tên",
+  "00240": "Vui lòng cung cấp assignToUsername",
+  "00241": "Định dạng ghi chú không hợp lệ",
+  "00242": "Định dạng ngày không hợp lệ",
+  "00243": "Truy cập không được ủy quyền. Bạn không có quyền.",
+  "00245": "Tên người dùng được gán không tồn tại.",
+  "00246":
+    "Truy cập không được ủy quyền. Bạn không có quyền gán danh sách mua sắm cho người dùng này.",
+  "00249": "Danh sách mua sắm đã được tạo thành công.",
 };
