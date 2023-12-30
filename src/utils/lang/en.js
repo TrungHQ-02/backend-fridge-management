@@ -200,4 +200,19 @@ module.exports = {
   "00212": "Fridge does not belong to the group admin.",
   "00213": "Fridge item does not exist.",
   "00216": "Fridge item updated successfully.",
+
+  "00217": "Please provide a food name",
+  "00218": "Food not found with the provided name",
+  "00219": "You dont have permisson",
+  "00221": "Fridge item associated with this food hasnt been created yet",
+  "00224": "Fridge item deletion successfull",
+
+  "00225": "You dont belong to any group",
+  "00228": "Successfull retrieve all fridge items",
+
+  "00229": "Please provide a food name",
+  "00230": "Food not found with the provided name",
+  "00232": "You dont have permisson",
+  "00234": "Fridge item associated with this food hasnt been created yet",
+  "00237": "Get specific item successfull",
 };

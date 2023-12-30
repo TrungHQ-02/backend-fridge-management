@@ -200,4 +200,21 @@ module.exports = {
   "00212": "Tủ lạnh không thuộc quản trị viên nhóm.",
   "00213": "Mục tủ lạnh không tồn tại.",
   "00216": "Cập nhật mục tủ lạnh thành công.",
+
+  // Xóa mục trong tủ lạnh
+  "00217": "Vui lòng cung cấp tên thực phẩm",
+  "00218": "Không tìm thấy thực phẩm với tên đã cung cấp",
+  "00219": "Bạn không có quyền",
+  "00221": "Mục trong tủ lạnh liên kết với thực phẩm này chưa được tạo",
+  "00224": "Xóa mục trong tủ lạnh thành công",
+
+  "00225": "Bạn chưa vào nhóm nào",
+  "00228": "Lấy danh sách đồ tủ lạnh thành công",
+
+  // Lấy item cụ thể
+  "00229": "Vui lòng cung cấp tên thực phẩm",
+  "00230": "Không tìm thấy thực phẩm với tên đã cung cấp",
+  "00232": "Bạn không có quyền",
+  "00234": "Mục trong tủ lạnh liên kết với thực phẩm này chưa được tạo",
+  "00237": "Lấy item cụ thể thành công",
 };

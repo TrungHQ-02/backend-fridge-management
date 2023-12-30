@@ -21,7 +21,23 @@ function validateUpdateFridgeItem(body) {
   return schema.validate(body);
 }
 
+function validateDeleteFridgeItem(body) {
+  const schema = Joi.object({
+    foodName: Joi.string().min(1).required(),
+  });
+  return schema.validate(body);
+}
+
+function validateGetSpecificFridgeItem(body) {
+  const schema = Joi.object({
+    foodName: Joi.string().min(1).required(),
+  });
+  return schema.validate(body);
+}
+
 module.exports = {
   validateCreateFridgeItem,
   validateUpdateFridgeItem,
+  validateDeleteFridgeItem,
+  validateGetSpecificFridgeItem,
 };
