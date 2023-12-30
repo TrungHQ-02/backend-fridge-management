@@ -70,7 +70,7 @@ let editUser = async (req, res) => {
     const storage = getStorage();
     const dateTime = giveCurrentDateTime();
 
-    const storageRef = ref(storage, `${user.id}/${dateTime}`);
+    const storageRef = ref(storage, `avatars/${user.id}/${dateTime}`);
 
     const metadata = {
       contentType: req.file.mimetype,
