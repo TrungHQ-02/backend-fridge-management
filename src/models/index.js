@@ -56,7 +56,9 @@ Object.keys(db).forEach((modelName) => {
 //   });
 
 // sequelize
-//   .sync()
+//   .sync({
+//     alter: true,
+//   })
 //   .then(() => {
 //     console.log("Database is updated");
 //   })
