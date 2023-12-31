@@ -69,7 +69,7 @@ let createTasks = async (req, res) => {
     const quantity = task.quantity;
     let food = "";
 
-    console.log(`Food: ${foodName}, Quantity: ${quantity}`);
+    // console.log(`Food: ${foodName}, Quantity: ${quantity}`);
     try {
       food = await db.Food.findOne({
         where: {

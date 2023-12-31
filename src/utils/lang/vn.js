@@ -266,4 +266,7 @@ module.exports = {
   "00285": "Không tìm thấy một món ăn với tên cung cấp trong mảng",
   "00285x": "Loại thức ăn này đã có trong danh sách rồi",
   "00287": "Thêm nhiệm vụ thành công",
+
+  "00288": "Người dùng này chưa thuộc nhóm nào",
+  "00292": "Lấy danh sách các shopping list thành công",
 };

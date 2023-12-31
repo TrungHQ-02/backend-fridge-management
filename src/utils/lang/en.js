@@ -263,4 +263,7 @@ module.exports = {
   "00285": "A food in array not found",
   "00285x": "This food exists in current shopping list already",
   "00287": "Add tasks successfully",
+
+  "00288": "This user doesnt belong to any group",
+  "00292": "Get list of shopping lists and tasks successfull",
 };
