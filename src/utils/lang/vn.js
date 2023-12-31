@@ -246,4 +246,12 @@ module.exports = {
   "00262": "Người dùng không tồn tại",
   "00263": "Người dùng không có quyền gán danh sách này cho tên người dùng",
   "00266": "Cập nhật danh sách mua sắm thành công",
+
+  // delete shopping list
+  "00267": "Cung cấp các trường cần thiết",
+  "00268": "Vui lòng cung cấp id danh sách",
+  "00270": "Người dùng không phải là quản trị viên nhóm",
+  "00272": "Không tìm thấy danh sách mua sắm",
+  "00273": "Người dùng không phải là quản trị viên của danh sách mua sắm này",
+  "00275": "Xóa danh sách mua sắm thành công",
 };

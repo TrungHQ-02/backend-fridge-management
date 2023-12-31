@@ -12,7 +12,7 @@ function validateCreateShoppingList(body) {
 
 function validateUpdateShoppingList(body) {
   const schema = Joi.object({
-    listId: Joi.string().required(),
+    listId: Joi.number().required(),
     newName: Joi.string().min(1).max(24).optional(),
     newAssignToUsername: Joi.string().allow("").optional(),
     newNote: Joi.string().allow("").optional(),
@@ -22,7 +22,32 @@ function validateUpdateShoppingList(body) {
   return schema.validate(body);
 }
 
+function validateDeleteShoppingList(body) {
+  const schema = Joi.object({
+    listId: Joi.number().required(),
+  });
+
+  return schema.validate(body);
+}
+
+// task
+function validateCreateShoppingTasks(body) {
+  const schema = Joi.object({
+    listId: Joi.number().required(),
+    tasks: Joi.array().items(
+      Joi.object({
+        foodName: Joi.string().required(),
+        quantity: Joi.number().required(),
+      })
+    ),
+  });
+
+  return schema.validate(body);
+}
+
 module.exports = {
   validateCreateShoppingList,
   validateUpdateShoppingList,
+  validateDeleteShoppingList,
+  validateCreateShoppingTasks,
 };

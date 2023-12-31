@@ -244,4 +244,12 @@ module.exports = {
   "00263":
     "User does not have the authority to assign this list to the username",
   "00266": "Shopping list updated successfully",
+
+  // delete shopping list
+  "00267": "Default error message",
+  "00268": "Please provide a list id",
+  "00270": "User is not the group administrator",
+  "00272": "Shopping list not found",
+  "00273": "User is not the administrator of this shopping list",
+  "00275": "Shopping list deletion completed!",
 };
