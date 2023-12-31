@@ -254,4 +254,16 @@ module.exports = {
   "00272": "Không tìm thấy danh sách mua sắm",
   "00273": "Người dùng không phải là quản trị viên của danh sách mua sắm này",
   "00275": "Xóa danh sách mua sắm thành công",
+
+  // add task
+  "00276": "Vui lòng cung cấp tất cả các trường bắt buộc",
+  "00277": "Vui lòng cung cấp một ID của danh sách",
+  "00278": "Vui lòng cung cấp một mảng nhiệm vụ",
+  "00279": "Vui lòng cung cấp một mảng nhiệm vụ với các trường hợp lệ",
+  "00281": "Người dùng không phải là quản trị viên của nhóm",
+  "00283": "Không tìm thấy danh sách mua sắm",
+  "00284": "Người dùng không phải là quản trị viên của danh sách mua sắm này",
+  "00285": "Không tìm thấy một món ăn với tên cung cấp trong mảng",
+  "00285x": "Loại thức ăn này đã có trong danh sách rồi",
+  "00287": "Thêm nhiệm vụ thành công",
 };

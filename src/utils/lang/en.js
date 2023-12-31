@@ -252,4 +252,15 @@ module.exports = {
   "00272": "Shopping list not found",
   "00273": "User is not the administrator of this shopping list",
   "00275": "Shopping list deletion completed!",
+
+  "00276": "Please provide all required fields",
+  "00277": "Please provide a list id",
+  "00278": "Please provide a task array",
+  "00279": "Please provide a task array with valid fields",
+  "00281": "User is not the group administrator",
+  "00283": "Shopping list not found",
+  "00284": "User is not the administrator of this shopping list",
+  "00285": "A food in array not found",
+  "00285x": "This food exists in current shopping list already",
+  "00287": "Add tasks successfully",
 };

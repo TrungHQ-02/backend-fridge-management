@@ -34,12 +34,14 @@ function validateDeleteShoppingList(body) {
 function validateCreateShoppingTasks(body) {
   const schema = Joi.object({
     listId: Joi.number().required(),
-    tasks: Joi.array().items(
-      Joi.object({
-        foodName: Joi.string().required(),
-        quantity: Joi.number().required(),
-      })
-    ),
+    tasks: Joi.array()
+      .items(
+        Joi.object({
+          foodName: Joi.string().required(),
+          quantity: Joi.number().required(),
+        })
+      )
+      .required(),
   });
 
   return schema.validate(body);
