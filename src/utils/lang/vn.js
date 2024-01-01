@@ -189,7 +189,7 @@ module.exports = {
 
   // cập nhật
   // 203: lỗi tổng quát trong quá trình xác nhận
-  "00204": "Vui lòng cung cấp tên thực phẩm hợp lệ!",
+  "00204": "Vui lòng cung cấp id của item tủ lạnh",
   "00204x":
     "Vui lòng cung cấp ít nhất một trong các trường sau: newQuantity, newNote, newUseWithin",
   "00205": "Vui lòng cung cấp một giá trị 'sử dụng trong' hợp lệ!",

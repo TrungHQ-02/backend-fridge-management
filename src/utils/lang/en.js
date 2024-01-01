@@ -189,7 +189,7 @@ module.exports = {
 
   // update
   // 203: validation general error
-  "00204": "Please provide a valid food name!",
+  "00204": "Please provide a item id!",
   "00204x":
     "Please provide at least one of the following fields: newQuantity, newNote, newUseWithin",
   "00205": "Please provide a valid 'use within' value!",

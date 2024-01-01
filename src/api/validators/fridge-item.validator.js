@@ -12,7 +12,7 @@ function validateCreateFridgeItem(body) {
 
 function validateUpdateFridgeItem(body) {
   const schema = Joi.object({
-    foodName: Joi.string().min(1).max(24).required(),
+    itemId: Joi.number().positive().required(),
     newUseWithin: Joi.number().positive().optional(),
     newQuantity: Joi.number().positive().optional(),
     newNote: Joi.string().allow("").optional(),

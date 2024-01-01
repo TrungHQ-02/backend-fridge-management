@@ -9,7 +9,7 @@ let updateFridgeItem = async (req, res) => {
   if (error) {
     let code = "00203";
 
-    if (error.details[0].message.includes("foodName")) code = "00204";
+    if (error.details[0].message.includes("itemId")) code = "00204";
     else if (error.details[0].message.includes("at least")) code = "00204x";
     else if (error.details[0].message.includes("newUseWithin")) code = "00205";
     else if (error.details[0].message.includes("newQuantity")) code = "00206";
@@ -26,18 +26,18 @@ let updateFridgeItem = async (req, res) => {
   let existingFridgeItem = "";
 
   // Check if food exists
-  try {
-    const exists = await db.Food.findOne({
-      where: {
-        name: req.body.foodName,
-      },
-    });
+  // try {
+  //   const exists = await db.Food.findOne({
+  //     where: {
+  //       name: req.body.foodName,
+  //     },
+  //   });
 
-    if (exists == null) return res.status(409).json(errorHelper("00208", req));
-    food = exists;
-  } catch (err) {
-    return res.status(500).json(errorHelper("00209", req, err.message));
-  }
+  //   if (exists == null) return res.status(409).json(errorHelper("00208", req));
+  //   food = exists;
+  // } catch (err) {
+  //   return res.status(500).json(errorHelper("00209", req, err.message));
+  // }
 
   try {
     user = await db.User.findOne({
@@ -52,20 +52,21 @@ let updateFridgeItem = async (req, res) => {
     return res.status(500).json(errorHelper("00211", req, err.message));
   }
 
-  if (food.UserId != user.belongsToGroupAdminId) {
-    return res.status(400).json(errorHelper("00212", req));
-  }
-
   // Check if the fridge item exists
   try {
     existingFridgeItem = await db.FridgeItem.findOne({
       where: {
-        FoodId: food.id,
+        id: req.body.itemId,
       },
     });
 
     if (existingFridgeItem == null)
       return res.status(409).json(errorHelper("00213", req));
+
+    if (existingFridgeItem.UserId != user.belongsToGroupAdminId) {
+      console.log(existingFridgeItem.UserId);
+      return res.status(400).json(errorHelper("00212", req));
+    }
   } catch (err) {
     return res.status(500).json(errorHelper("00214", req, err.message));
   }
