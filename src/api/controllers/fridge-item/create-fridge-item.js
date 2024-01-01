@@ -9,7 +9,7 @@ let createFridgeItem = async (req, res) => {
   if (error) {
     let code = "00189";
 
-    console.log(error.details[0].message);
+    // console.log(error.details[0].message);
     if (error.details[0].message.includes("foodName")) code = "00190";
     else if (error.details[0].message.includes("useWithin")) code = "00191";
     else if (error.details[0].message.includes("quantity")) code = "00192";

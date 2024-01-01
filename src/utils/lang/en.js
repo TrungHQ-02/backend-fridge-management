@@ -272,4 +272,16 @@ module.exports = {
   "00296": "Task not found with the provided id",
   "00297": "User is not the group administrator",
   "00299": "Task deletion successfull",
+
+  "00300": "Please provide all required fields",
+  "00301": "Please provide a task id in taskId field",
+  "00302":
+    "Please provide at least one of the following fields: newFoodName, newQuantity",
+  "00303": "Please provide a valid newFoodName",
+  "00304": "Please provide a valid newQuantity",
+  "00306": "Task not found with the provided id",
+  "00307": "User is not the group administrator",
+  "00308": "Task not found with the provided name",
+  "00309": "This food exists in current shopping list already",
+  "00312": "Task updated successfully",
 };

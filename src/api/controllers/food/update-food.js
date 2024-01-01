@@ -26,7 +26,7 @@ let updateFood = async (req, res) => {
   const { error } = validateUpdateFood(req.body);
   if (error) {
     let code = "00161";
-    console.log(error.details[0].message);
+    // console.log(error.details[0].message);
     if (error.details[0].message.includes("name")) code = "00162";
     else if (error.details[0].message.includes("at least")) code = "00163";
     else if (error.details[0].message.includes("newCategory")) code = "00164";
@@ -144,7 +144,7 @@ let updateFood = async (req, res) => {
         metadata
       );
       photoUrl = await getDownloadURL(snapshot.ref);
-      console.log("URL", photoUrl);
+      // console.log("URL", photoUrl);
       food.imageUrl = photoUrl;
     } catch (err) {
       hasError = true;

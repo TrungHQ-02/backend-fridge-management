@@ -18,7 +18,7 @@ const {
 } = require("firebase/storage");
 let editUser = async (req, res) => {
   const { error } = validateEditUser(req.body);
-  console.log(error);
+  // console.log(error);
   if (error) {
     let code = "00077";
     const message = error.details[0].message;
@@ -76,7 +76,7 @@ let editUser = async (req, res) => {
       contentType: req.file.mimetype,
     };
 
-    console.log(metadata);
+    // console.log(metadata);
 
     try {
       const snapshot = await uploadBytesResumable(

@@ -5,6 +5,7 @@ const deleteShoppingList = require("./delete-shopping-list");
 const createTasks = require("./create-shopping-tasks");
 const getListOfTasks = require("./get-list-of-shopping-tasks");
 const deleteTask = require("./delete-shopping-task");
+const updateShoppingTask = require("./update-shopping-task");
 
 module.exports = {
   createShoppingList,
@@ -13,4 +14,5 @@ module.exports = {
   createTasks,
   getListOfTasks,
   deleteTask,
+  updateShoppingTask,
 };

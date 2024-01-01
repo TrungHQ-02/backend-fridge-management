@@ -8,7 +8,7 @@ let createShoppingList = async (req, res) => {
   const { error } = validateCreateShoppingList(req.body);
   if (error) {
     let code = "00238";
-    console.log(error.details[0].message);
+    // console.log(error.details[0].message);
     if (
       error.details[0].message.includes("name") &&
       !error.details[0].message.includes("assign")

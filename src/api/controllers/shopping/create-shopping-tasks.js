@@ -9,7 +9,7 @@ let createTasks = async (req, res) => {
 
   if (error) {
     let code = "00276";
-    console.log(error.details[0].message);
+    // console.log(error.details[0].message);
     if (error.details[0].message.includes("listId")) code = "00277";
     else if (
       error.details[0].message.includes("tasks") &&

@@ -103,7 +103,7 @@ let verifyEmail = async (req, res) => {
       );
     }
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     return res.status(500).json(errorHelper("00057", req, err.message));
   }
 

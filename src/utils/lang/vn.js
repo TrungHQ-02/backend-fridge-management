@@ -275,4 +275,16 @@ module.exports = {
   "00296": "Không tìm thấy nhiệm vụ với ID đã cung cấp",
   "00297": "Người dùng không phải là quản trị viên nhóm",
   "00299": "Xóa nhiệm vụ thành công",
+
+  "00300": "Vui lòng cung cấp tất cả các trường bắt buộc",
+  "00301": "Vui lòng cung cấp một ID nhiệm vụ trong trường taskId",
+  "00302":
+    "Vui lòng cung cấp ít nhất một trong các trường sau: newFoodName, newQuantity",
+  "00303": "Vui lòng cung cấp một newFoodName hợp lệ",
+  "00304": "Vui lòng cung cấp một newQuantity hợp lệ",
+  "00306": "Không tìm thấy nhiệm vụ với ID đã cung cấp",
+  "00307": "Người dùng không phải là quản trị viên nhóm",
+  "00308": "Không tìm thấy nhiệm vụ với tên đã cung cấp",
+  "00309": "Thực phẩm này đã tồn tại trong danh sách mua hàng hiện tại",
+  "00312": "Cập nhật nhiệm vụ thành công",
 };

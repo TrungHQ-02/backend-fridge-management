@@ -27,7 +27,7 @@ let createFood = async (req, res) => {
   if (error) {
     let code = "00147";
 
-    console.log(error.details[0].message);
+    // console.log(error.details[0].message);
     if (error.details[0].message.includes("name")) code = "00148";
     else if (error.details[0].message.includes("foodCategoryName"))
       code = "00149";
@@ -128,7 +128,7 @@ let createFood = async (req, res) => {
         metadata
       );
       photoUrl = await getDownloadURL(snapshot.ref);
-      console.log("URL", photoUrl);
+      // console.log("URL", photoUrl);
     } catch (err) {
       hasError = true;
       return res.status(500).json(errorHelper("00158", req, err.message)).end();

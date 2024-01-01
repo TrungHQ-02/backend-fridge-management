@@ -55,10 +55,21 @@ function validateDeleteTask(body) {
   return schema.validate(body);
 }
 
+function validateUpdateTask(body) {
+  const schema = Joi.object({
+    taskId: Joi.number().required(),
+    newFoodName: Joi.string().min(1).max(24).optional(),
+    newQuantity: Joi.number().optional(),
+  }).or("newFoodName", "newQuantity");
+
+  return schema.validate(body);
+}
+
 module.exports = {
   validateCreateShoppingList,
   validateUpdateShoppingList,
   validateDeleteShoppingList,
   validateCreateShoppingTasks,
   validateDeleteTask,
+  validateUpdateTask,
 };

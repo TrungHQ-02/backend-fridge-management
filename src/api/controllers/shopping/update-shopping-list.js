@@ -7,7 +7,7 @@ const { errorHelper, logger, getText } = require("../../../utils/index.js");
 let updateShoppingList = async (req, res) => {
   const { error } = validateUpdateShoppingList(req.body);
 
-  console.log(req.body);
+  // console.log(req.body);
 
   if (error) {
     let code = "00250";
