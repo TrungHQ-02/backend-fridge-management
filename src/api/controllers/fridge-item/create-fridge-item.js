@@ -56,17 +56,18 @@ let createFridgeItem = async (req, res) => {
     return res.status(400).json(errorHelper("00198", req));
   }
 
-  try {
-    const exists = await db.FridgeItem.findOne({
-      where: {
-        FoodId: food.id,
-      },
-    });
+  // check if exist
+  // try {
+  //   const exists = await db.FridgeItem.findOne({
+  //     where: {
+  //       FoodId: food.id,
+  //     },
+  //   });
 
-    if (exists != null) return res.status(409).json(errorHelper("00199", req));
-  } catch (err) {
-    return res.status(500).json(errorHelper("00200", req, err.message));
-  }
+  //   if (exists != null) return res.status(409).json(errorHelper("00199", req));
+  // } catch (err) {
+  //   return res.status(500).json(errorHelper("00200", req, err.message));
+  // }
 
   try {
     let currentDate = new Date();
@@ -82,7 +83,7 @@ let createFridgeItem = async (req, res) => {
 
     newFridgeItem = await db.FridgeItem.findOne({
       where: {
-        FoodId: food.id,
+        id: newFridgeItem.id,
       },
     });
   } catch (err) {

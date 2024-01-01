@@ -16,6 +16,7 @@ function validateUpdateFridgeItem(body) {
     newUseWithin: Joi.number().positive().optional(),
     newQuantity: Joi.number().positive().optional(),
     newNote: Joi.string().allow("").optional(),
+    newFoodName: Joi.string().min(1).optional(),
   }).or("newUseWithin", "newQuantity", "newNote");
 
   return schema.validate(body);

@@ -195,10 +195,12 @@ module.exports = {
   "00205": "Vui lòng cung cấp một giá trị 'sử dụng trong' hợp lệ!",
   "00206": "Vui lòng cung cấp một lượng hợp lệ!",
   "00207": "Định dạng ghi chú mới không hợp lệ!",
+  "00207": "Định dạng tên thức ăn mới không hợp lệ!",
   "00208": "Thực phẩm không tồn tại.",
   "00210": "Người dùng không thuộc bất kỳ nhóm nào",
   "00212": "Tủ lạnh không thuộc quản trị viên nhóm.",
   "00213": "Mục tủ lạnh không tồn tại.",
+  "00214x": "Tên thực phẩm mới không tồn tại",
   "00216": "Cập nhật mục tủ lạnh thành công.",
 
   // Xóa mục trong tủ lạnh

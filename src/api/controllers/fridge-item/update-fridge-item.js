@@ -14,6 +14,7 @@ let updateFridgeItem = async (req, res) => {
     else if (error.details[0].message.includes("newUseWithin")) code = "00205";
     else if (error.details[0].message.includes("newQuantity")) code = "00206";
     else if (error.details[0].message.includes("newNote")) code = "00207";
+    else if (error.details[0].message.includes("newFoodName")) code = "00207x";
 
     return res
       .status(400)
@@ -87,11 +88,28 @@ let updateFridgeItem = async (req, res) => {
       existingFridgeItem.note = req.body.newNote;
     }
 
-    await existingFridgeItem.save();
+    if (req.body.newFoodName) {
+      let newFood = "";
+      try {
+        newFood = await db.Food.findOne({
+          where: {
+            name: req.body.newFoodName,
+          },
+        });
 
+        if (newFood == null)
+          return res.status(409).json(errorHelper("00214x", req));
+
+        existingFridgeItem.FoodId = newFood.id;
+      } catch (err) {
+        return res.status(500).json(errorHelper("00214xx", req, err.message));
+      }
+    }
+
+    await existingFridgeItem.save();
     existingFridgeItem = await db.FridgeItem.findOne({
       where: {
-        FoodId: existingFridgeItem.FoodId,
+        id: existingFridgeItem.id,
       },
     });
   } catch (err) {

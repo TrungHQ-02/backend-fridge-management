@@ -195,10 +195,12 @@ module.exports = {
   "00205": "Please provide a valid 'use within' value!",
   "00206": "Please provide a valid quantity!",
   "00207": "Invalid new note format!",
+  "00207x": "Invalid new food name format!",
   "00208": "Food does not exist.",
   "00210": "User doesnt belong to any group",
   "00212": "Fridge does not belong to the group admin.",
   "00213": "Fridge item does not exist.",
+  "00214x": "New food name does not exist",
   "00216": "Fridge item updated successfully.",
 
   "00217": "Please provide a food name",

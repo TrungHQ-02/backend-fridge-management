@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Food.hasOne(models.MealPlan);
-      Food.hasOne(models.FridgeItem);
+      Food.hasMany(models.FridgeItem);
       Food.belongsTo(models.User);
       Food.belongsTo(models.FoodCategory);
       Food.belongsTo(models.UnitOfMeasurement);
