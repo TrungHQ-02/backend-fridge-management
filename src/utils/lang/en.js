@@ -266,4 +266,10 @@ module.exports = {
 
   "00288": "This user doesnt belong to any group",
   "00292": "Get list of shopping lists and tasks successfull",
+
+  "00293": "Please provide all required fields",
+  "00294": "Please provide a task id in taskId field",
+  "00296": "Task not found with the provided id",
+  "00297": "User is not the group administrator",
+  "00299": "Task deletion successfull",
 };

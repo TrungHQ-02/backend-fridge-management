@@ -5,6 +5,7 @@ const {
   deleteShoppingList,
   createTasks,
   getListOfTasks,
+  deleteTask,
 } = require("../controllers/shopping/index.js");
 
 const { auth } = require("../middlewares/index.js");
@@ -17,5 +18,6 @@ router.delete("/", auth, deleteShoppingList);
 
 router.post("/task", auth, createTasks);
 router.get("/task", auth, getListOfTasks);
+router.delete("/task", auth, deleteTask);
 
 module.exports = router;

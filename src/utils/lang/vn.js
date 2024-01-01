@@ -269,4 +269,10 @@ module.exports = {
 
   "00288": "Người dùng này chưa thuộc nhóm nào",
   "00292": "Lấy danh sách các shopping list thành công",
+
+  "00293": "Vui lòng cung cấp tất cả các trường bắt buộc",
+  "00294": "Vui lòng cung cấp một ID nhiệm vụ trong trường taskId",
+  "00296": "Không tìm thấy nhiệm vụ với ID đã cung cấp",
+  "00297": "Người dùng không phải là quản trị viên nhóm",
+  "00299": "Xóa nhiệm vụ thành công",
 };

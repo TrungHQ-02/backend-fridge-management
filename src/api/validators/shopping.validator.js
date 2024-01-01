@@ -47,9 +47,18 @@ function validateCreateShoppingTasks(body) {
   return schema.validate(body);
 }
 
+function validateDeleteTask(body) {
+  const schema = Joi.object({
+    taskId: Joi.number().required(),
+  });
+
+  return schema.validate(body);
+}
+
 module.exports = {
   validateCreateShoppingList,
   validateUpdateShoppingList,
   validateDeleteShoppingList,
   validateCreateShoppingTasks,
+  validateDeleteTask,
 };
