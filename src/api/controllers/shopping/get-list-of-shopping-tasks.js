@@ -38,6 +38,15 @@ let getListOfTasks = async (req, res) => {
 
       await Promise.all(
         list.map(async function (shoppingList) {
+          let user = await db.User.findOne({
+            where: {
+              id: shoppingList.assignedToUserId,
+            },
+          });
+
+          console.log(user.username);
+
+          shoppingList.username = user.username;
           let details = await db.ShoppingListDetail.findAll({
             where: {
               ShoppingListId: shoppingList.id,
