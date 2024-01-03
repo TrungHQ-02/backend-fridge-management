@@ -298,4 +298,11 @@ module.exports = {
   "00317": "Không tìm thấy thực phẩm với tên đã cung cấp",
   "00319": "Người dùng không phải là quản trị viên nhóm",
   "00322": "Thêm kế hoạch bữa ăn thành công",
+
+  // Xóa kế hoạch bữa ăn
+  "00323": "Vui lòng cung cấp tất cả các trường bắt buộc",
+  "00324": "Vui lòng cung cấp một ID kế hoạch hợp lệ",
+  "00325": "Không tìm thấy kế hoạch với ID đã cung cấp",
+  "00327": "Người dùng không phải là quản trị viên nhóm",
+  "00330": "Kế hoạch bữa ăn của bạn đã được xóa thành công",
 };

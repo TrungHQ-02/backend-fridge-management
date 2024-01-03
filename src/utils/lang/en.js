@@ -295,4 +295,10 @@ module.exports = {
   "00317": "Food not found with the provided name",
   "00319": "User is not the group administrator",
   "00322": "Add meal plan successfull",
+
+  "00323": "Please provide all required fields",
+  "00324": "Please provide a valid plan id",
+  "00325": "Plan not found with the provided id",
+  "00327": "User is not the group administrator",
+  "00330": "Your meal plan was deleted successfully.",
 };

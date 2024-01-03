@@ -8,7 +8,14 @@ function validateCreateMealPlan(body) {
   });
   return schema.validate(body);
 }
+function validateDeleteMealPlan(body) {
+  const schema = Joi.object({
+    planId: Joi.number().positive().required(),
+  });
+  return schema.validate(body);
+}
 
 module.exports = {
   validateCreateMealPlan,
+  validateDeleteMealPlan,
 };
