@@ -289,4 +289,13 @@ module.exports = {
   "00308": "Không tìm thấy nhiệm vụ với tên đã cung cấp",
   "00309": "Thực phẩm này đã tồn tại trong danh sách mua hàng hiện tại",
   "00312": "Cập nhật nhiệm vụ thành công",
+
+  // Kế hoạch bữa ăn
+  "00313": "Vui lòng cung cấp tất cả các trường bắt buộc",
+  "00314": "Vui lòng cung cấp một tên thực phẩm hợp lệ",
+  "00315": "Vui lòng cung cấp một dấu thời gian hợp lệ",
+  "00316": "Vui lòng cung cấp một tên hợp lệ cho bữa ăn: sáng, trưa, tối",
+  "00317": "Không tìm thấy thực phẩm với tên đã cung cấp",
+  "00319": "Người dùng không phải là quản trị viên nhóm",
+  "00322": "Thêm kế hoạch bữa ăn thành công",
 };

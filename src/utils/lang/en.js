@@ -286,4 +286,13 @@ module.exports = {
   "00308": "Task not found with the provided name",
   "00309": "This food exists in current shopping list already",
   "00312": "Task updated successfully",
+
+  // meal plan
+  "00313": "Please provide all required fields",
+  "00314": "Please provide a valid food name",
+  "00315": "Please provide a valid timestamp",
+  "00316": "Please provide a valid name for the meal: breakfast, lunch, dinner",
+  "00317": "Food not found with the provided name",
+  "00319": "User is not the group administrator",
+  "00322": "Add meal plan successfull",
 };
