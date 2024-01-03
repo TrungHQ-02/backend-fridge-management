@@ -313,4 +313,7 @@ module.exports = {
   "00339": "User is not the group administrator",
   "00341": "New food name does not exist",
   "00344": "Meal plan updated successfully.",
+
+  "00345": "You dont belong to any group yet",
+  "00348": "Get plans successfull",
 };

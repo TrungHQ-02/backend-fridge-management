@@ -318,4 +318,7 @@ module.exports = {
   "00339": "Người dùng không phải là quản trị viên nhóm",
   "00341": "Tên thực phẩm mới không tồn tại",
   "00344": "Cập nhật kế hoạch bữa ăn thành công",
+
+  "00345": "Bạn chưa vào nhóm nào",
+  "00348": "Lấy danh sách thành công",
 };
