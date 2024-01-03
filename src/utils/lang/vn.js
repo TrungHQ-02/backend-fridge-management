@@ -349,4 +349,6 @@ module.exports = {
   "00372": "Vui lòng cung cấp một ID công thức hợp lệ",
   "00373": "Không tìm thấy công thức với ID đã cung cấp",
   "00376": "Công thức của bạn đã được xóa thành công",
+
+  "00378": "Lấy các công thức thành công",
 };

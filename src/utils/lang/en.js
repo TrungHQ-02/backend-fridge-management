@@ -342,4 +342,7 @@ module.exports = {
   "00372": "Please provide a valid recipe id",
   "00373": "Recipe not found with the provided id",
   "00376": "Your recipe was deleted successfully.",
+
+  //00377
+  "00378": "Get recipes successfull",
 };
