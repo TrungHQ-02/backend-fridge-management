@@ -9,12 +9,13 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Food.hasOne(models.MealPlan);
+      Food.hasMany(models.MealPlan);
       Food.hasMany(models.FridgeItem);
+      Food.hasMany(models.ShoppingListDetail);
+      Food.hasMany(models.Recipe);
       Food.belongsTo(models.User);
       Food.belongsTo(models.FoodCategory);
       Food.belongsTo(models.UnitOfMeasurement);
-      Food.hasMany(models.ShoppingListDetail);
     }
   }
   Food.init(
