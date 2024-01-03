@@ -343,4 +343,10 @@ module.exports = {
   "00365": "Không tìm thấy công thức với ID đã cung cấp",
   "00367": "Tên thực phẩm mới không tồn tại",
   "00370": "Cập nhật công thức nấu ăn thành công",
+
+  // Xóa công thức nấu ăn
+  "00371": "Vui lòng cung cấp tất cả các trường bắt buộc",
+  "00372": "Vui lòng cung cấp một ID công thức hợp lệ",
+  "00373": "Không tìm thấy công thức với ID đã cung cấp",
+  "00376": "Công thức của bạn đã được xóa thành công",
 };

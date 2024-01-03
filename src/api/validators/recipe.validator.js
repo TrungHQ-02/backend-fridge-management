@@ -10,9 +10,9 @@ function validateCreateRecipe(body) {
   return schema.validate(body);
 }
 
-function validateDeleteMealPlan(body) {
+function validateDeleteRecipe(body) {
   const schema = Joi.object({
-    planId: Joi.number().positive().required(),
+    recipeId: Joi.number().positive().required(),
   });
   return schema.validate(body);
 }
@@ -32,4 +32,5 @@ function validateUpdateRecipe(body) {
 module.exports = {
   validateCreateRecipe,
   validateUpdateRecipe,
+  validateDeleteRecipe,
 };

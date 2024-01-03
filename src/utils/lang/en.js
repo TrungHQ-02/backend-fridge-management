@@ -337,4 +337,9 @@ module.exports = {
   "00365": "Recipe not found with the provided id",
   "00367": "New food name does not exist",
   "00370": "Recipe updated successfully.",
+
+  "00371": "Please provide all required fields",
+  "00372": "Please provide a valid recipe id",
+  "00373": "Recipe not found with the provided id",
+  "00376": "Your recipe was deleted successfully.",
 };
