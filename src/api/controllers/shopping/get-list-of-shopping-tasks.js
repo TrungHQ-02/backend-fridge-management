@@ -34,6 +34,7 @@ let getListOfTasks = async (req, res) => {
           belongsToGroupAdminId: userId,
         },
         raw: true,
+        order: [["date", "DESC"]],
       });
 
       await Promise.all(
