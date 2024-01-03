@@ -188,7 +188,7 @@ module.exports = {
   "00202": "Fridge item created successfully.",
 
   // update
-  // 203: validation general error
+  "00203": "Please provide all required fields",
   "00204": "Please provide a item id!",
   "00204x":
     "Please provide at least one of the following fields: newQuantity, newNote, newUseWithin",
@@ -219,7 +219,7 @@ module.exports = {
   "00237": "Get specific item successfull",
 
   // create shopping list for a user
-  "00238": "Default error message",
+  "00238": "Please provide all required fields",
   "00239": "Please provide a name",
   "00240": "Please provide an assignToUsername",
   "00241": "Invalid note format",
@@ -231,7 +231,7 @@ module.exports = {
   "00249": "Shopping list created successfully.",
 
   // update shopping list
-  "00250": "Default error message",
+  "00250": "Please provide all required fields",
   "00251": "Please provide a list id",
   "00252":
     "Please provide at least one of the following fields: newName, newAssignToUsername, newNote, newDate",
@@ -248,7 +248,7 @@ module.exports = {
   "00266": "Shopping list updated successfully",
 
   // delete shopping list
-  "00267": "Default error message",
+  "00267": "Please provide all required fields",
   "00268": "Please provide a list id",
   "00270": "User is not the group administrator",
   "00272": "Shopping list not found",
@@ -301,4 +301,16 @@ module.exports = {
   "00325": "Plan not found with the provided id",
   "00327": "User is not the group administrator",
   "00330": "Your meal plan was deleted successfully.",
+
+  "00331": "Please provide all required fields",
+  "00332": "Please provide a plan id!",
+  "00333":
+    "Please provide at least one of the following fields: newFoodName, newTimestamp, newName",
+  "00334": "Please provide a valid new food name!",
+  "00335": "Please provide a valid timestamp!",
+  "00336": "Please provide a valid name: breakfast, lunch, dinner!",
+  "00337": "Plan not found with the provided id",
+  "00339": "User is not the group administrator",
+  "00341": "New food name does not exist",
+  "00344": "Meal plan updated successfully.",
 };

@@ -188,7 +188,7 @@ module.exports = {
   "00202": "Mục trong tủ lạnh được tạo thành công.",
 
   // cập nhật
-  // 203: lỗi tổng quát trong quá trình xác nhận
+  "00203": "Vui cung cấp tất cả các trường cần thiết",
   "00204": "Vui lòng cung cấp id của item tủ lạnh",
   "00204x":
     "Vui lòng cung cấp ít nhất một trong các trường sau: newQuantity, newNote, newUseWithin",
@@ -222,7 +222,7 @@ module.exports = {
 
   // tạo shopping list cho thành viên
 
-  "00238": "Thông báo lỗi mặc định",
+  "00238": "Vui cung cấp tất cả các trường cần thiết",
   "00239": "Vui lòng cung cấp tên",
   "00240": "Vui lòng cung cấp assignToUsername",
   "00241": "Định dạng ghi chú không hợp lệ",
@@ -234,7 +234,7 @@ module.exports = {
   "00249": "Danh sách mua sắm đã được tạo thành công.",
 
   //update shopping list
-  "00250": "Thông báo lỗi mặc định",
+  "00250": "Vui cung cấp tất cả các trường cần thiết",
   "00251": "Vui lòng cung cấp id danh sách",
   "00252":
     "Vui lòng cung cấp ít nhất một trong những trường sau: newName, newAssignToUsername, newNote, newDate",
@@ -305,4 +305,17 @@ module.exports = {
   "00325": "Không tìm thấy kế hoạch với ID đã cung cấp",
   "00327": "Người dùng không phải là quản trị viên nhóm",
   "00330": "Kế hoạch bữa ăn của bạn đã được xóa thành công",
+
+  // Cập nhật kế hoạch bữa ăn
+  "00331": "Vui lòng cung cấp tất cả các trường bắt buộc",
+  "00332": "Vui lòng cung cấp một ID kế hoạch!",
+  "00333":
+    "Vui lòng cung cấp ít nhất một trong các trường sau: newFoodName, newTimestamp, newName",
+  "00334": "Vui lòng cung cấp một tên thực phẩm mới hợp lệ!",
+  "00335": "Vui lòng cung cấp một dấu thời gian hợp lệ!",
+  "00336": "Vui lòng cung cấp một tên hợp lệ: sáng, trưa, tối!",
+  "00337": "Không tìm thấy kế hoạch với ID đã cung cấp",
+  "00339": "Người dùng không phải là quản trị viên nhóm",
+  "00341": "Tên thực phẩm mới không tồn tại",
+  "00344": "Cập nhật kế hoạch bữa ăn thành công",
 };
