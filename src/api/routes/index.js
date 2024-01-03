@@ -11,6 +11,7 @@ const food = require("./food.js");
 const fridgeItem = require("./fridge-item.js");
 const shopping = require("./shopping.js");
 const mealPlan = require("./meal-plan.js");
+const recipe = require("./recipe.js");
 
 router.use(apiSpecs, serve);
 router.get(apiSpecs, setup(specDoc, { explorer: true }));
@@ -21,5 +22,6 @@ router.use("/food", food);
 router.use("/fridge", fridgeItem);
 router.use("/shopping", shopping);
 router.use("/meal", mealPlan);
+router.use("/recipe", recipe);
 
 module.exports = router;

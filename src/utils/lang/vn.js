@@ -321,4 +321,26 @@ module.exports = {
 
   "00345": "Bạn chưa vào nhóm nào",
   "00348": "Lấy danh sách thành công",
+
+  // Công thức nấu ăn
+  "00349": "Vui lòng cung cấp tất cả các trường bắt buộc",
+  "00350": "Vui lòng cung cấp một tên thực phẩm hợp lệ",
+  "00351": "Vui lòng cung cấp một tên công thức hợp lệ",
+  "00352": "Vui lòng cung cấp một mô tả công thức hợp lệ",
+  "00353": "Vui lòng cung cấp nội dung HTML công thức hợp lệ",
+  "00354": "Không tìm thấy thực phẩm với tên đã cung cấp",
+  "00357": "Thêm công thức nấu ăn thành công",
+
+  // Cập nhật công thức nấu ăn
+  "00358": "Vui lòng cung cấp tất cả các trường bắt buộc",
+  "00359": "Vui lòng cung cấp một ID công thức!",
+  "00360":
+    "Vui lòng cung cấp ít nhất một trong các trường sau: newFoodName, newDescription, newHtmlContent, newName",
+  "00361": "Vui lòng cung cấp một tên thực phẩm mới hợp lệ!",
+  "00362": "Vui lòng cung cấp một mô tả mới hợp lệ!",
+  "00363": "Vui lòng cung cấp nội dung HTML mới hợp lệ!",
+  "00364": "Vui lòng cung cấp một tên công thức mới hợp lệ!",
+  "00365": "Không tìm thấy công thức với ID đã cung cấp",
+  "00367": "Tên thực phẩm mới không tồn tại",
+  "00370": "Cập nhật công thức nấu ăn thành công",
 };

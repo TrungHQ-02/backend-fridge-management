@@ -316,4 +316,25 @@ module.exports = {
 
   "00345": "You dont belong to any group yet",
   "00348": "Get plans successfull",
+
+  // recipe
+  "00349": "Please provide all required fields",
+  "00350": "Please provide a valid food name",
+  "00351": "Please provide a valid recipe name",
+  "00352": "Please provide a valid recipe description",
+  "00353": "Please provide a valid recipe htmlContent",
+  "00354": "Food not found with the provided name",
+  "00357": "Add recipe successfull",
+
+  "00358": "Please provide all required fields",
+  "00359": "Please provide a recipe id!",
+  "00360":
+    "Please provide at least one of the following fields: newFoodName, newDescription, newHtmlContent, newName",
+  "00361": "Please provide a valid new food name!",
+  "00362": "Please provide a valid new description!",
+  "00363": "Please provide a valid new html content!",
+  "00364": "Please provide a valid new recipe name!",
+  "00365": "Recipe not found with the provided id",
+  "00367": "New food name does not exist",
+  "00370": "Recipe updated successfully.",
 };
