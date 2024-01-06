@@ -7,6 +7,7 @@ const {
   getListOfTasks,
   deleteTask,
   updateShoppingTask,
+  markTask,
 } = require("../controllers/shopping/index.js");
 
 const { auth } = require("../middlewares/index.js");
@@ -21,5 +22,7 @@ router.post("/task", auth, createTasks);
 router.get("/task", auth, getListOfTasks);
 router.delete("/task", auth, deleteTask);
 router.put("/task", auth, updateShoppingTask);
+
+router.put("/task/mark", auth, markTask);
 
 module.exports = router;

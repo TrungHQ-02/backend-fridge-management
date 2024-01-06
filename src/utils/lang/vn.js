@@ -269,6 +269,13 @@ module.exports = {
   "00285x": "Loại thức ăn này đã có trong danh sách rồi",
   "00287": "Thêm nhiệm vụ thành công",
 
+  // mark task as done
+  "00287x": "Vui lòng cung cấp tất cả các trường bắt buộc",
+  "00287x1": "Vui lòng cung cấp một ID nhiệm vụ trong trường taskId",
+  "00287x3": "Không tìm thấy nhiệm vụ với ID đã cung cấp",
+  "00287x4": "Không được phép, nhiệm vụ này thuộc về người khác",
+  "00287x6": "Nhiệm vụ đã thay đổi trạng thái thành công",
+
   "00288": "Người dùng này chưa thuộc nhóm nào",
   "00292": "Lấy danh sách các shopping list thành công",
 

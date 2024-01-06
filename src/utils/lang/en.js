@@ -266,6 +266,13 @@ module.exports = {
   "00285x": "This food exists in current shopping list already",
   "00287": "Add tasks successfully",
 
+  // mark task as done
+  "00287x": "Please provide all required fields",
+  "00287x1": "Please provide a task id in taskId field",
+  "00287x3": "Task not found with the provided id",
+  "00287x4": "Unauthorized, this task belongs to another person",
+  "00287x6": "Task status changed successfully",
+
   "00288": "This user doesnt belong to any group",
   "00292": "Get list of shopping lists and tasks successfull",
 

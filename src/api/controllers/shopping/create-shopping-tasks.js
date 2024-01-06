@@ -7,6 +7,8 @@ const { errorHelper, logger, getText } = require("../../../utils/index.js");
 let createTasks = async (req, res) => {
   const { error } = validateCreateShoppingTasks(req.body);
 
+  console.log(req.body);
+
   if (error) {
     let code = "00276";
     // console.log(error.details[0].message);
@@ -83,8 +85,12 @@ let createTasks = async (req, res) => {
       let exists = await db.ShoppingListDetail.findOne({
         where: {
           FoodId: food.id,
+          done: false,
+          ShoppingListId: req.body.listId,
         },
       });
+
+      console.log(exists);
       if (exists) {
         return res.status(403).json(errorHelper("00285x", req));
       }

@@ -65,6 +65,13 @@ function validateUpdateTask(body) {
   return schema.validate(body);
 }
 
+function validateMarkTaskAsDone(body) {
+  const schema = Joi.object({
+    taskId: Joi.number().required(),
+  });
+  return schema.validate(body);
+}
+
 module.exports = {
   validateCreateShoppingList,
   validateUpdateShoppingList,
@@ -72,4 +79,5 @@ module.exports = {
   validateCreateShoppingTasks,
   validateDeleteTask,
   validateUpdateTask,
+  validateMarkTaskAsDone,
 };

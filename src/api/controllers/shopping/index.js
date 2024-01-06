@@ -7,6 +7,8 @@ const getListOfTasks = require("./get-list-of-shopping-tasks");
 const deleteTask = require("./delete-shopping-task");
 const updateShoppingTask = require("./update-shopping-task");
 
+const markTask = require("./mark-task-as-done");
+
 module.exports = {
   createShoppingList,
   updateShoppingList,
@@ -15,4 +17,5 @@ module.exports = {
   getListOfTasks,
   deleteTask,
   updateShoppingTask,
+  markTask,
 };
