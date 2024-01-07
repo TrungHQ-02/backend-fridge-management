@@ -1,5 +1,10 @@
 const db = require("../../../../models/index.js");
-const { errorHelper, getText, logger } = require("../../../../utils/index.js");
+const {
+  errorHelper,
+  getText,
+  logger,
+  sendNotificationToUserId,
+} = require("../../../../utils/index.js");
 const {
   validateAddUserToGroup,
 } = require("../../../validators/user.validator.js");
@@ -49,6 +54,15 @@ let addMemberToGroup = async (req, res) => {
     return res.status(500).json(errorHelper("00101", req, err.message));
   }
 
+  sendNotificationToUserId(
+    userToAdd.id,
+    {
+      title: "You have been added to a group.",
+      body: "A user has added you to a group. Please check the app for any updates in your group!",
+    },
+    req,
+    res
+  );
   logger("00102", req.user.id, getText("en", "00102"), "Info", req);
   return res.status(200).json({
     resultMessage: { en: getText("en", "00102"), vn: getText("vn", "00102") },

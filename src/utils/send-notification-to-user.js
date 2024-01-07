@@ -30,6 +30,4 @@ const sendNotificationToUserId = async (userId, message, req, res) => {
     });
 };
 
-module.exports = {
-  sendNotificationToUserId: sendNotificationToUserId,
-};
+module.exports = sendNotificationToUserId;

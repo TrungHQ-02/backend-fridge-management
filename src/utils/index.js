@@ -9,6 +9,7 @@ const {
   signRefreshToken,
 } = require("./helpers/jwt-helper.js");
 const sendCodeToEmail = require("./send-code-to-email.js");
+const sendNotificationToUserId = require("./send-notification-to-user.js");
 module.exports = {
   logger,
   errorHelper,
@@ -19,4 +20,5 @@ module.exports = {
   signRefreshToken,
   sendCodeToEmail,
   giveCurrentDateTime,
+  sendNotificationToUserId,
 };
