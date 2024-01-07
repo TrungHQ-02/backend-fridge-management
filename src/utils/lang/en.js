@@ -78,7 +78,7 @@ module.exports = {
   "00093": "Cannot create a new group, you belong to a group already",
   "00095": "Your group has been created successfully",
   "00096": "You dont belong to any group",
-  "00098": "Successfully",
+  "00098": "Got members successfully",
 
   "00099": "This user has already belonged to a group",
   "00099x": "This user doesnt exist",
@@ -168,7 +168,7 @@ module.exports = {
   // 175
   // 176: image upload failed
   // 177
-  "00178": "Successfully",
+  "00178": "Food updated successfully",
   // delete food
   "00179": "Please provide a food name",
   "00180": "Food not found with the provided name",

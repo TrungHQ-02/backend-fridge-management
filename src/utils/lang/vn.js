@@ -76,7 +76,7 @@ module.exports = {
   "00095": "Tạo nhóm thành công",
 
   "00096": "Bạn không thuộc về nhóm nào",
-  "00098": "Thành công",
+  "00098": "Thành công lấy danh sách thành viên",
 
   "00099": "Người này đã thuộc về một nhóm",
   "00099x": "Không tồn tại user này",
@@ -166,7 +166,7 @@ module.exports = {
   // 175
   // 176: Lỗi tải ảnh lên
   // 177
-  "00178": "Thành công",
+  "00178": "Cập nhật thức ăn thành công",
 
   // Xóa thực phẩm
   "00179": "Vui lòng cung cấp tên thực phẩm",
