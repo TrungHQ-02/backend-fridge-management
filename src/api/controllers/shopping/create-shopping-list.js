@@ -2,7 +2,12 @@ const db = require("../../../models/index.js");
 const {
   validateCreateShoppingList,
 } = require("../../validators/shopping.validator.js");
-const { errorHelper, logger, getText } = require("../../../utils/index.js");
+const {
+  errorHelper,
+  logger,
+  getText,
+  sendNotificationToUserId,
+} = require("../../../utils/index.js");
 
 let createShoppingList = async (req, res) => {
   const { error } = validateCreateShoppingList(req.body);
@@ -81,6 +86,16 @@ let createShoppingList = async (req, res) => {
   } catch (error) {
     return res.status(500).json(errorHelper("00248", req, error.message));
   }
+
+  sendNotificationToUserId(
+    assignedUser.id,
+    {
+      title: "New shopping tasks!",
+      body: "Group admin has assinged you some tasks, go and check it out!",
+    },
+    req,
+    res
+  );
 
   logger("00249", req.user.id, getText("en", "00249"), "Info", req);
 
