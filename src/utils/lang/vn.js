@@ -3,6 +3,7 @@ module.exports = {
   verificationCodeBody: "Dưới đây là mã xác nhận của bạn:",
   welcomeCode: "Chào mừng bạn đến với (Tên Ứng Dụng),",
   "00005": "Vui lòng cung cấp đầy đủ thông tin để gửi mã.",
+  "00005x": "Không thể gửi thông báo",
   "00006": "Truy cập bị từ chối. Không có token được cung cấp.",
   "00007": "ID người dùng không hợp lệ.",
   "00008": "Đã xảy ra lỗi máy chủ nội bộ, vui lòng thử lại.",
@@ -67,6 +68,9 @@ module.exports = {
   "00086": "Thông tin hồ sơ của bạn đã được thay đổi thành công.",
   "00089": "Thông tin người dùng đã được lấy thành công.",
   "00092": "Tài khoản của bạn đã bị xóa thành công.",
+
+  "00092x1": "Vui lòng cung cấp một token",
+  "00092x3": "Token lưu thành công",
 
   "00093": "Không thể tạo nhóm, bạn đã thuộc về một nhóm rồi",
   "00095": "Tạo nhóm thành công",

@@ -15,6 +15,7 @@ const {
   getMembersInGroup,
   addMemberToGroup,
   deleteMember,
+  saveNotificationToken,
 } = require("../controllers/user/index.js");
 
 const { auth, imageUpload, authority } = require("../middlewares/index.js");
@@ -40,5 +41,7 @@ router.post("/group/add", auth, addMemberToGroup);
 router.delete("/group", auth, deleteMember);
 
 router.get("/logs", auth, authority, changePassword);
+
+router.put("/token", auth, saveNotificationToken);
 
 module.exports = router;

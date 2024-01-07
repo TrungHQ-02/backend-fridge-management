@@ -3,6 +3,7 @@ module.exports = {
   verificationCodeBody: "Here is your confirm code:",
   welcomeCode: "Welcome to the (App Name),",
   "00005": "Please provide all information to send a code.",
+  "00005x": "Send notification failed",
   "00006": "Access denied. No token provided.",
   "00007": "Invalid user id.",
   "00008": "An internal server error occurred, please try again.",
@@ -69,6 +70,10 @@ module.exports = {
   "00086": "Your profile information was changed successfully.",
   "00089": "The user information has gotten successfully.",
   "00092": "Your account was deleted successfully.",
+
+  // save notification token
+  "00092x1": "Please provide a token",
+  "00092x3": "Token saved successfully",
 
   "00093": "Cannot create a new group, you belong to a group already",
   "00095": "Your group has been created successfully",

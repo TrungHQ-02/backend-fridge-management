@@ -83,6 +83,13 @@ function validateDeleteUserFromGroup(body) {
   return schema.validate(body);
 }
 
+function validateSaveNotificationToken(body) {
+  const schema = Joi.object({
+    token: Joi.string().min(1).required(),
+  });
+  return schema.validate(body);
+}
+
 module.exports = {
   validateRegister,
   validateLogin,
@@ -94,4 +101,5 @@ module.exports = {
   validateEditUser,
   validateAddUserToGroup,
   validateDeleteUserFromGroup,
+  validateSaveNotificationToken,
 };

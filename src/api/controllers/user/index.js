@@ -13,6 +13,8 @@ const createAGroup = require("./group/create-group.js");
 const getMembersInGroup = require("./group/get-members.js");
 const addMemberToGroup = require("./group/add-member.js");
 const deleteMember = require("./group/delete-member.js");
+
+const saveNotificationToken = require("./edit/save-notification-token.js");
 module.exports = {
   login,
   logout,
@@ -29,4 +31,5 @@ module.exports = {
   getMembersInGroup,
   addMemberToGroup,
   deleteMember,
+  saveNotificationToken,
 };
