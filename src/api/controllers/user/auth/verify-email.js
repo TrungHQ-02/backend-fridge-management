@@ -107,12 +107,21 @@ let verifyEmail = async (req, res) => {
     return res.status(500).json(errorHelper("00057", req, err.message));
   }
 
+  let finalUser = await db.User.findOne({
+    where: {
+      id: req.user.id,
+    },
+  });
+
+  finalUser.password = "";
+
   logger("00058", req.user.id, getText("en", "00058"), "Info", req);
   return res.status(200).json({
     resultMessage: { en: getText("en", "00058"), vn: getText("vn", "00058") },
     resultCode: "00058",
     accessToken,
     refreshToken,
+    user: finalUser,
   });
 };
 
