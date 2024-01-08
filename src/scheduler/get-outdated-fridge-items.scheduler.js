@@ -4,7 +4,7 @@ const moment = require("moment");
 const { sendNotificationToUserId } = require("../utils/index");
 
 function scheduleJob() {
-  schedule.scheduleJob("*/3 * * * * *", getOutdatedItemAndSendNotification);
+  schedule.scheduleJob("0 6 * * *", getOutdatedItemAndSendNotification);
 }
 
 let getOutdatedItemAndSendNotification = async () => {
